@@ -1,0 +1,67 @@
+<header class="main-header">
+    <div class="header-wrapper">
+        <!-- Adicionar link para home -->
+        <a href="" class="logo-link">
+            <!-- Adicionar link da logo -->
+            <img src="" alt="SpaceHub" class="header-logo">
+        </a>
+
+        <nav class="menu-nav">
+            <ul>
+                <li>
+                    <!-- Adicionar link -->
+                    <a class="nav-link is-active" href="">
+                        <!-- Adicionar ícone do link com aria-hidden="true" -->
+
+                        <!-- Texto dinâmico -->
+                        <span>Explorar</span>
+                    </a>
+                </li>
+                <li>
+                    <!-- Adicionar link -->
+                    <a class="nav-link" href="">
+                        <!-- Adicionar ícone do link com aria-hidden="true" -->
+
+                        <!-- Texto dinâmico -->
+                        <span>Minhas reservas</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="user-menu-container">
+            <button id="btn-user-menu" class="user-menu-btn" aria-expanded="false" aria-haspopup="true"
+                aria-controls="user-dropdown">
+                <div class="user-avatar">
+                    <!-- Adicionar imagem do avatar com aria-hidden="true" -->
+                </div>
+
+                <div class="user-info">
+                    <!-- Texto dinâmico -->
+                    <span class="user-name">Olá, usuário</span>
+                    <!-- Texto dinâmico -->
+                    <span class="user-role">Hóspede</span>
+                </div>
+
+                <!-- Adicionar ícone de seta para baixo com aria-hidden="true" -->
+
+            </button>
+
+            <div id="user-dropdown" class="user-dropdown-menu hidden" role="menu" aria-labelledby="btn-user-menu">
+                <ul role="none">
+                    <li role="none">
+                        <!-- Adicionar link de logout -->
+                        <a href="" class="dropdown-link logout-link" role="menuitem">
+                            <span>Sair da conta</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <button class="btn-menu-toggle" id="btn-open-menu" aria-label="Abrir menu de navegação" aria-expanded="false"
+            aria-controls="modal-menu">
+            <!-- Ícone de Menu / Hamburger com aria-hidden="true" -->
+        </button>
+    </div>
+</header>

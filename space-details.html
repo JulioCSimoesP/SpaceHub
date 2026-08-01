@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpaceHub | Conectando lugares e pessoas</title>
+    <!-- PREENCHER COM A DESCRIÇÃO DO SITE -->
+    <meta name="description" content="">
+    <meta name="author" content="Júlio Simões">
+    <meta name="copyright" content="© 2026 Júlio Simões">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- PREENCHER COM O LINK DA FONTE -->
+    <link href="" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v0.0.3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
+
+    <!-- PREENCHER COM OS LINKS DO FAVICON -->
+    <link rel="icon" type="image/x-icon" href="">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="icon" type="image/png" sizes="16x16" href="">
+    <link rel="apple-touch-icon" sizes="180x180" href="">
+    <link rel="manifest" href="">
+
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#007deb">
+    <meta property="og:title" content="SpaceHub | Conectando lugares e pessoas">
+    <!-- PREENCHER COM A DESCRIÇÃO DO SITE -->
+    <meta property="og:description" content="">
+    <!-- PREENCHER OPEN GRAPH -->
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SpaceHub | Conectando lugares e pessoas">
+    <!-- PREENCHER COM IMAGEM DO OPEN GRAPH -->
+    <meta name="twitter:image" content="">
+    <!-- PREENCHER COM A DESCRIÇÃO DO SITE -->
+    <meta name="twitter:description" content="">
+    <!-- PREENCHER COM O LINK CANÔNICO -->
+    <link rel="canonical" href="">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js" defer></script>
+    <script src="script.js?v0.0.2" defer></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="header-wrapper">
+            <!-- Adicionar link para home -->
+            <a href="" class="logo-link">
+                <!-- Adicionar link da logo -->
+                <img src="" alt="SpaceHub" class="header-logo">
+            </a>
+
+            <nav class="menu-nav">
+                <ul>
+                    <li>
+                        <!-- Adicionar link -->
+                        <a class="nav-link is-active" href="">
+                            <!-- Adicionar ícone do link com aria-hidden="true" -->
+
+                            <!-- Texto dinâmico -->
+                            <span>Explorar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <!-- Adicionar link -->
+                        <a class="nav-link" href="">
+                            <!-- Adicionar ícone do link com aria-hidden="true" -->
+
+                            <!-- Texto dinâmico -->
+                            <span>Minhas reservas</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="user-menu-container">
+                <button id="btn-user-menu" class="user-menu-btn" aria-expanded="false" aria-haspopup="true"
+                    aria-controls="user-dropdown">
+                    <div class="user-avatar">
+                        <!-- Adicionar imagem do avatar com aria-hidden="true" -->
+                    </div>
+
+                    <div class="user-info">
+                        <!-- Texto dinâmico -->
+                        <span class="user-name">Olá, usuário</span>
+                        <!-- Texto dinâmico -->
+                        <span class="user-role">Hóspede</span>
+                    </div>
+
+                    <!-- Adicionar ícone de seta para baixo com aria-hidden="true" -->
+
+                </button>
+
+                <div id="user-dropdown" class="user-dropdown-menu hidden" role="menu" aria-labelledby="btn-user-menu">
+                    <ul role="none">
+                        <li role="none">
+                            <!-- Adicionar link de logout -->
+                            <a href="" class="dropdown-link logout-link" role="menuitem">
+                                <span>Sair da conta</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <button class="btn-menu-toggle" id="btn-open-menu" aria-label="Abrir menu de navegação"
+                aria-expanded="false" aria-controls="modal-menu">
+                <!-- Ícone de Menu / Hamburger com aria-hidden="true" -->
+            </button>
+        </div>
+    </header>
+
+    <main class="space-details-container">
+
+        <section class="space-header-section">
+
+            <!-- Adicionar link para voltar -->
+            <a href="" class="btn-back">
+                <!-- Ícone de seta para trás com aria-hidden="true" -->
+                <span>Voltar para tela principal</span>
+            </a>
+
+            <!-- Texto dinâmico -->
+            <h1 class="space-title">Título do anúncio</h1>
+
+            <div class="space-location-badge">
+                <!-- Adicionar ícone de localização com aria-hidden="true" -->
+                <!-- Texto dinâmico -->
+                <span>Rua biribiri, 123 - Frufru</span>
+            </div>
+        </section>
+
+        <!-- Galeria de Fotos Fancybox -->
+        <!-- Todas as imagens com "a href", "a data-caption", "img src" e "img alt" dinâmicos (a data-caption = img alt) -->
+        <section class="space-gallery-section" aria-label="Galeria de fotos do anúncio">
+            <div class="gallery-grid">
+                <!-- Foto 1 (Destaque Principal) -->
+                <a href="assets/images/placeholder-space-1.jpg" class="gallery-item gallery-item-main"
+                    data-fancybox="space-gallery" data-caption="Foto principal do espaço">
+                    <img src="assets/images/placeholder-space-1.jpg" alt="Foto principal do espaço">
+                </a>
+
+                <!-- Foto 2 -->
+                <a href="assets/images/placeholder-space-2.jpg" class="gallery-item" data-fancybox="space-gallery"
+                    data-caption="Vista da sala ampla">
+                    <img src="assets/images/placeholder-space-2.jpg" alt="Vista da sala ampla">
+                </a>
+
+                <!-- Foto 3 -->
+                <a href="assets/images/placeholder-space-3.jpg" class="gallery-item" data-fancybox="space-gallery"
+                    data-caption="Área externa com piscina">
+                    <img src="assets/images/placeholder-space-3.jpg" alt="Área externa com piscina">
+                </a>
+
+                <!-- Foto 4 -->
+                <a href="assets/images/placeholder-space-4.jpg" class="gallery-item" data-fancybox="space-gallery"
+                    data-caption="Cozinha equipada">
+                    <img src="assets/images/placeholder-space-4.jpg" alt="Cozinha equipada">
+                </a>
+
+                <!-- Foto 5 (Com badge de +X fotos) -->
+                <a href="assets/images/placeholder-space-5.jpg" class="gallery-item gallery-item-more"
+                    data-fancybox="space-gallery" data-caption="Quarto principal">
+                    <img src="assets/images/placeholder-space-5.jpg" alt="Quarto principal">
+                    <div class="gallery-more-overlay">
+                        <!-- Texto dinâmico -->
+                        <span>+7 fotos</span>
+                    </div>
+                </a>
+
+                <!-- Fotos 'ocultas' no grid, mas acessíveis no Fancybox quando o usuário clicar no carrossel -->
+                <a href="assets/images/placeholder-space-6.jpg" class="hidden" data-fancybox="space-gallery"
+                    data-caption="Banheiro suíte"></a>
+                <a href="assets/images/placeholder-space-7.jpg" class="hidden" data-fancybox="space-gallery"
+                    data-caption="Varanda gourmet"></a>
+            </div>
+        </section>
+
+        <section class="space-description-section">
+            <h2 class="section-title">Sobre o espaço</h2>
+            <!-- Texto dinâmico -->
+            <p class="space-description-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.
+            </p>
+        </section>
+
+        <section class="space-amenities-section">
+            <h2 class="section-title">Comodidades</h2>
+
+            <ul class="amenities-list" id="amenities-list-object">
+                <li class="amenity-item">
+                    <!-- Ícone dinâmico -->
+
+                    <!-- Texto dinâmico -->
+                    <span>Wi-Fi de alta velocidade</span>
+                </li>
+                <li class="amenity-item">
+                    <!-- Ícone dinâmico -->
+
+                    <!-- Texto dinâmico -->
+                    <span>Ar-condicionado</span>
+                </li>
+                <li class="amenity-item">
+                    <!-- Ícone dinâmico -->
+
+                    <!-- Texto dinâmico -->
+                    <span>Estacionamento gratuito</span>
+                </li>
+                <li class="amenity-item">
+                    <!-- Ícone dinâmico -->
+
+                    <!-- Texto dinâmico -->
+                    <span>Cozinha completa</span>
+                </li>
+
+                <li class="amenity-item extra-item hidden">
+                    <!-- Ícone dinâmico -->
+
+                    <!-- Texto dinâmico -->
+                    <span>TV 4K com Netflix</span>
+                </li>
+                <li class="amenity-item extra-item hidden">
+                    <!-- Ícone dinâmico -->
+
+                    <!-- Texto dinâmico -->
+                    <span>Piscina privativa</span>
+                </li>
+            </ul>
+
+            <button type="button" id="btn-toggle-amenities" class="btn-toggle-expand" aria-expanded="false"
+                aria-controls="amenities-list-object">
+                <span>Mostrar mais</span>
+                <!-- Ícone de seta para baixo com aria-hidden="true" -->
+            </button>
+        </section>
+
+        <section class="booking-card-section">
+            <div class="booking-card">
+                <div class="booking-price-header">
+                    <!-- Texto dinâmico -->
+                    <span class="booking-price">R$ 310</span>
+                    <!-- Texto dinâmico -->
+                    <span class="booking-period">/ noite</span>
+                </div>
+
+                <form id="form-booking" class="booking-form">
+                    <div class="booking-dates-grid">
+                        <div class="input-group">
+                            <label for="booking-checkin">Check-in</label>
+                            <input type="date" id="booking-checkin" name="checkin" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="booking-checkout">Check-out</label>
+                            <input type="date" id="booking-checkout" name="checkout" required>
+                        </div>
+                    </div>
+
+                    <dl class="booking-cost-summary">
+                        <div class="cost-row">
+                            <!-- Texto dinâmico -->
+                            <dt class="cost-label">R$ 310 × 5 noites</dt>
+                            <!-- Texto dinâmico -->
+                            <dd class="cost-value">R$ 1.550,00</dd>
+                        </div>
+                        <div class="cost-row">
+                            <dt class="cost-label">Taxa de limpeza</dt>
+                            <!-- Texto dinâmico -->
+                            <dd class="cost-value">R$ 80,00</dd>
+                        </div>
+                        <div class="cost-row">
+                            <dt class="cost-label">Taxa de serviço</dt>
+                            <!-- Texto dinâmico -->
+                            <dd class="cost-value">R$ 70,00</dd>
+                        </div>
+                        <div class="cost-row cost-total">
+                            <dt class="cost-label">Total</dt>
+                            <!-- Texto dinâmico -->
+                            <dd class="cost-value">R$ 1.700,00</dd>
+                        </div>
+                    </dl>
+
+                    <button type="submit" id="btn-submit-booking" class="btn-primary btn-block">
+                        Realizar reserva
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="space-location-section">
+            <h2 class="section-title">Localização</h2>
+            <!-- Texto dinâmico -->
+            <address class="space-full-address">
+                Rua biribiri, 123 - Tralalá, Frufru - AB<br>
+                CEP: 12345-789
+            </address>
+
+            <!-- Container da API do Google Maps (Alvo de renderização do JS via Lat/Lng) -->
+            <div id="space-map" class="google-map-container" aria-label="Mapa com localização exata do espaço"></div>
+        </section>
+
+        <section class="space-policies-section">
+            <h2 class="section-title">Políticas do espaço</h2>
+
+            <ul class="policies-list" id="policies-list-object">
+                <li class="policy-item">
+                    <!-- Ícone da política com aria-hidden="true" -->
+
+                    <!-- Texto dinâmico -->
+                    <span>Check-in a partir das 14:00 / Check-out até 11:00</span>
+                </li>
+                <li class="policy-item">
+                    <!-- Ícone da política com aria-hidden="true" -->
+
+                    <!-- Texto dinâmico -->
+                    <span>Proibido festas ou eventos barulhentos</span>
+                </li>
+                <li class="policy-item">
+                    <!-- Ícone da política com aria-hidden="true" -->
+
+                    <!-- Texto dinâmico -->
+                    <span>Não é permitido fumar dentro do imóvel</span>
+                </li>
+
+                <li class="policy-item extra-item hidden">
+                    <!-- Ícone da política com aria-hidden="true" -->
+
+                    <!-- Texto dinâmico -->
+                    <span>Não é permitido fumar dentro do imóvel</span>
+                </li>
+                <li class="policy-item extra-item hidden">
+                    <!-- Ícone da política com aria-hidden="true" -->
+
+                    <!-- Texto dinâmico -->
+                    <span>Animais de estimação permitidos mediante taxa</span>
+                </li>
+            </ul>
+
+            <button type="button" id="btn-toggle-policies" class="btn-toggle-expand" aria-expanded="false"
+                aria-controls="policies-list-object">
+                <span>Mostrar mais</span>
+                <!-- Ícone de seta para baixo com aria-hidden="true" -->
+            </button>
+        </section>
+    </main>
+
+</body>
+
+</html>

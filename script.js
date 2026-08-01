@@ -6,7 +6,15 @@ const AppState = {
 
 const AppController = {
     initialize() {
-        
+        Fancybox.bind('[data-fancybox="space-gallery"]', {
+            // Ativa as miniaturas no rodapé
+            Thumbs: {
+                type: "modern",
+            },
+            // Animação suave ao abrir/fechar
+            showClass: "f-fadeIn",
+            hideClass: "f-fadeOut",
+        });
     }
 };
 

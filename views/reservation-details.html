@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpaceHub | Conectando lugares e pessoas</title>
+    <!-- PREENCHER COM A DESCRIÇÃO DO SITE -->
+    <meta name="description" content="">
+    <meta name="author" content="Júlio Simões">
+    <meta name="copyright" content="© 2026 Júlio Simões">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- PREENCHER COM O LINK DA FONTE -->
+    <link href="" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v0.0.3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
+
+    <!-- PREENCHER COM OS LINKS DO FAVICON -->
+    <link rel="icon" type="image/x-icon" href="">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="icon" type="image/png" sizes="16x16" href="">
+    <link rel="apple-touch-icon" sizes="180x180" href="">
+    <link rel="manifest" href="">
+
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#007deb">
+    <meta property="og:title" content="SpaceHub | Conectando lugares e pessoas">
+    <!-- PREENCHER COM A DESCRIÇÃO DO SITE -->
+    <meta property="og:description" content="">
+    <!-- PREENCHER OPEN GRAPH -->
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SpaceHub | Conectando lugares e pessoas">
+    <!-- PREENCHER COM IMAGEM DO OPEN GRAPH -->
+    <meta name="twitter:image" content="">
+    <!-- PREENCHER COM A DESCRIÇÃO DO SITE -->
+    <meta name="twitter:description" content="">
+    <!-- PREENCHER COM O LINK CANÔNICO -->
+    <link rel="canonical" href="">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js" defer></script>
+    <script src="script.js?v0.0.2" defer></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="header-wrapper">
+            <!-- Adicionar link para home -->
+            <a href="" class="logo-link">
+                <!-- Adicionar link da logo -->
+                <img src="" alt="SpaceHub" class="header-logo">
+            </a>
+
+            <nav class="menu-nav">
+                <ul>
+                    <li>
+                        <!-- Adicionar link -->
+                        <a class="nav-link is-active" href="">
+                            <!-- Adicionar ícone do link com aria-hidden="true" -->
+
+                            <!-- Texto dinâmico -->
+                            <span>Explorar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <!-- Adicionar link -->
+                        <a class="nav-link" href="">
+                            <!-- Adicionar ícone do link com aria-hidden="true" -->
+
+                            <!-- Texto dinâmico -->
+                            <span>Minhas reservas</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="user-menu-container">
+                <button id="btn-user-menu" class="user-menu-btn" aria-expanded="false" aria-haspopup="true"
+                    aria-controls="user-dropdown">
+                    <div class="user-avatar">
+                        <!-- Adicionar imagem do avatar com aria-hidden="true" -->
+                    </div>
+
+                    <div class="user-info">
+                        <!-- Texto dinâmico -->
+                        <span class="user-name">Olá, usuário</span>
+                        <!-- Texto dinâmico -->
+                        <span class="user-role">Hóspede</span>
+                    </div>
+
+                    <!-- Adicionar ícone de seta para baixo com aria-hidden="true" -->
+
+                </button>
+
+                <div id="user-dropdown" class="user-dropdown-menu hidden" role="menu" aria-labelledby="btn-user-menu">
+                    <ul role="none">
+                        <li role="none">
+                            <!-- Adicionar link de logout -->
+                            <a href="" class="dropdown-link logout-link" role="menuitem">
+                                <span>Sair da conta</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <button class="btn-menu-toggle" id="btn-open-menu" aria-label="Abrir menu de navegação"
+                aria-expanded="false" aria-controls="modal-menu">
+                <!-- Ícone de Menu / Hamburger com aria-hidden="true" -->
+            </button>
+        </div>
+    </header>
+
+    <main class="reservation-details-container">
+
+        <section class="reservation-details-header-section">
+
+            <!-- Adicionar link para voltar -->
+            <a href="" class="btn-back">
+                <!-- Ícone de seta para trás com aria-hidden="true" -->
+                <span>Voltar para tela principal</span>
+            </a>
+
+            <div class="reservation-title-wrapper">
+                <h1 class="page-title">Detalhes da reserva</h1>
+                <!-- Badge de Status -->
+                <span class="status-badge status-confirmed">Confirmada</span>
+            </div>
+        </section>
+
+        <article class="reservation-space-card">
+            <header class="space-card-header">
+                <h2 class="space-title">Título do anúncio</h2>
+
+                <div class="space-location-badge">
+                    <!-- Ícone de localização com aria-hidden="true" -->
+                    <!-- Texto dinâmico -->
+                    <span>Rua biribiri, 123 - Frufru</span>
+                </div>
+            </header>
+
+            <div id="reservation-map" class="google-map-container"
+                aria-label="Mapa com a localização do espaço reservado">
+                <!-- O mapa será renderizado via JavaScript -->
+            </div>
+
+            <ul class="amenities-summary-list">
+                <li class="amenity-item">
+                    <!-- Ícone da comodidade com aria-hidden="true" -->
+
+                    <!-- Texto dinâmico -->
+                    <span>Wi-Fi</span>
+                </li>
+                <li class="amenity-item">
+                    <!-- Ícone da comodidade com aria-hidden="true" -->
+
+                    <!-- Texto dinâmico -->
+                    <span>Ar-condicionado</span>
+                </li>
+                <li class="amenity-item">
+                    <!-- Ícone da comodidade com aria-hidden="true" -->
+
+                    <!-- Texto dinâmico -->
+                    <span>Estacionamento</span>
+                </li>
+                <!-- Último item contador ("+X comodidades") -->
+                <li class="amenity-item amenity-item-more">
+                    <!-- Ícone da comodidade com aria-hidden="true" -->
+
+                    <!-- Texto dinâmico -->
+                    <span>+3 comodidades</span>
+                </li>
+            </ul>
+
+            <!-- Link dinâmico -->
+            <a href="" class="btn-secondary btn-block">
+                <span>Ver anúncio completo</span>
+                <!-- Ícone de redirecionamento com aria-hidden="true" -->
+            </a>
+        </article>
+
+        <section class="payment-summary-card">
+            <h2 class="card-title">Resumo do pagamento</h2>
+
+            <dl class="reservation-booking-cost-summary">
+                <div class="cost-row">
+                    <!-- Texto dinâmico -->
+                    <dt class="cost-label">R$ 310 × 5 noites</dt>
+                    <!-- Texto dinâmico -->
+                    <dd class="cost-value">R$ 1.550,00</dd>
+                </div>
+                <div class="cost-row">
+                    <dt class="cost-label">Taxa de limpeza</dt>
+                    <!-- Texto dinâmico -->
+                    <dd class="cost-value">R$ 80,00</dd>
+                </div>
+                <div class="cost-row">
+                    <dt class="cost-label">Taxa de serviço</dt>
+                    <!-- Texto dinâmico -->
+                    <dd class="cost-value">R$ 70,00</dd>
+                </div>
+                <div class="cost-row cost-total">
+                    <dt class="cost-label">Total pago</dt>
+                    <!-- Texto dinâmico -->
+                    <dd class="cost-value">R$ 1.700,00</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section class="reservation-info-card">
+            <h2 class="card-title">Informações da reserva</h2>
+
+            <dl class="reservation-details-list">
+                <div class="info-row">
+                    <dt class="info-label">Check-in:</dt>
+                    <!-- Texto e hora dinâmicos -->
+                    <dd class="info-value">10/10/2026 às 14:00</dd>
+                </div>
+                <div class="info-row">
+                    <dt class="info-label">Check-out:</dt>
+                    <!-- Texto e hora dinâmicos -->
+                    <dd class="info-value">15/10/2026 às 11:00</dd>
+                </div>
+                <div class="info-row">
+                    <dt class="info-label">Duração da estadia:</dt>
+                    <!-- Texto dinâmico -->
+                    <dd class="info-value">5 dias</dd>
+                </div>
+                <div class="info-row">
+                    <dt class="info-label">Status:</dt>
+                    <!-- Status dinâmico -->
+                    <dd class="info-value">
+                        <span class="status-badge status-confirmed">Confirmada</span>
+                    </dd>
+                </div>
+            </dl>
+        </section>
+
+        <section class="user-profile-card">
+            <!-- Texto dinâmico -->
+            <h2 class="card-title">Informações do anfitrião</h2>
+
+            <div class="user-profile-header">
+                <div class="user-avatar-large">
+                    <!-- Ícone ou tag <img> com a foto do usuário -->
+                </div>
+                <!-- Nome dinâmico -->
+                <span class="user-profile-name">Nome do anfitrião</span>
+            </div>
+
+            <dl class="user-contact-list">
+                <div class="info-row">
+                    <dt class="info-label">Email:</dt>
+                    <!-- Email dinâmico com link mailto -->
+                    <dd class="info-value">
+                        <a href="mailto:loremipsum@lorem.com.br" class="contact-link">loremipsum@lorem.com.br</a>
+                    </dd>
+                </div>
+                <div class="info-row">
+                    <dt class="info-label">Telefone:</dt>
+                    <!-- Telefone dinâmico com link tel -->
+                    <dd class="info-value">
+                        <a href="tel:99999999999" class="contact-link">(99) 99999-9999</a>
+                    </dd>
+                </div>
+            </dl>
+        </section>
+
+        <section class="space-policies-card">
+            <h2 class="card-title">Políticas do espaço</h2>
+
+            <ul class="policies-full-list">
+                <li class="policy-item">
+                    <!-- Ícone da política com aria-hidden="true" -->
+
+                    <!-- Texto dinâmico -->
+                    <span>Check-in a partir das 14:00 / Check-out até 11:00</span>
+                </li>
+                <li class="policy-item">
+                    <!-- Ícone da política com aria-hidden="true" -->
+
+                    <!-- Texto dinâmico -->
+                    <span>Proibido festas ou eventos barulhentos</span>
+                </li>
+                <li class="policy-item">
+                    <!-- Ícone da política com aria-hidden="true" -->
+
+                    <!-- Texto dinâmico -->
+                    <span>Não é permitido fumar dentro do imóvel</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpaceHub | Conectando lugares e pessoas</title>
+    <!-- PREENCHER COM A DESCRIÇÃO DO SITE -->
+    <meta name="description" content="">
+    <meta name="author" content="Júlio Simões">
+    <meta name="copyright" content="© 2026 Júlio Simões">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- PREENCHER COM O LINK DA FONTE -->
+    <link href="" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v0.0.3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
+
+    <!-- PREENCHER COM OS LINKS DO FAVICON -->
+    <link rel="icon" type="image/x-icon" href="">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="icon" type="image/png" sizes="16x16" href="">
+    <link rel="apple-touch-icon" sizes="180x180" href="">
+    <link rel="manifest" href="">
+
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#007deb">
+    <meta property="og:title" content="SpaceHub | Conectando lugares e pessoas">
+    <!-- PREENCHER COM A DESCRIÇÃO DO SITE -->
+    <meta property="og:description" content="">
+    <!-- PREENCHER OPEN GRAPH -->
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SpaceHub | Conectando lugares e pessoas">
+    <!-- PREENCHER COM IMAGEM DO OPEN GRAPH -->
+    <meta name="twitter:image" content="">
+    <!-- PREENCHER COM A DESCRIÇÃO DO SITE -->
+    <meta name="twitter:description" content="">
+    <!-- PREENCHER COM O LINK CANÔNICO -->
+    <link rel="canonical" href="">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js" defer></script>
+    <script src="script.js?v0.0.2" defer></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="header-wrapper">
+            <!-- Adicionar link para home -->
+            <a href="" class="logo-link">
+                <!-- Adicionar link da logo -->
+                <img src="" alt="SpaceHub" class="header-logo">
+            </a>
+
+            <nav class="menu-nav">
+                <ul>
+                    <li>
+                        <!-- Adicionar link -->
+                        <a class="nav-link is-active" href="">
+                            <!-- Adicionar ícone do link com aria-hidden="true" -->
+
+                            <!-- Texto dinâmico -->
+                            <span>Explorar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <!-- Adicionar link -->
+                        <a class="nav-link" href="">
+                            <!-- Adicionar ícone do link com aria-hidden="true" -->
+
+                            <!-- Texto dinâmico -->
+                            <span>Minhas reservas</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="user-menu-container">
+                <button id="btn-user-menu" class="user-menu-btn" aria-expanded="false" aria-haspopup="true"
+                    aria-controls="user-dropdown">
+                    <div class="user-avatar">
+                        <!-- Adicionar imagem do avatar com aria-hidden="true" -->
+                    </div>
+
+                    <div class="user-info">
+                        <!-- Texto dinâmico -->
+                        <span class="user-name">Olá, usuário</span>
+                        <!-- Texto dinâmico -->
+                        <span class="user-role">Hóspede</span>
+                    </div>
+
+                    <!-- Adicionar ícone de seta para baixo com aria-hidden="true" -->
+
+                </button>
+
+                <div id="user-dropdown" class="user-dropdown-menu hidden" role="menu" aria-labelledby="btn-user-menu">
+                    <ul role="none">
+                        <li role="none">
+                            <!-- Adicionar link de logout -->
+                            <a href="" class="dropdown-link logout-link" role="menuitem">
+                                <span>Sair da conta</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <button class="btn-menu-toggle" id="btn-open-menu" aria-label="Abrir menu de navegação"
+                aria-expanded="false" aria-controls="modal-menu">
+                <!-- Ícone de Menu / Hamburger com aria-hidden="true" -->
+            </button>
+        </div>
+    </header>
+
+    <main class="space-form-container">
+
+        <form id="form-create-space" class="create-space-form">
+
+            <header class="form-header">
+                <div class="form-header-text">
+                    <h1 class="page-title">Criar novo anúncio</h1>
+                    <p class="page-description">Preencha as informações abaixo para anunciar o seu espaço.</p>
+                </div>
+
+                <div class="form-header-actions">
+                    <!-- Adicionar link de retorno -->
+                    <a href="" class="btn-secondary">Cancelar</a>
+                    <button type="submit" class="btn-primary">Criar anúncio</button>
+                </div>
+            </header>
+
+            <fieldset class="form-section">
+                <legend class="section-title">Informações básicas</legend>
+
+                <div class="input-group">
+                    <label for="space-title">Título do anúncio</label>
+                    <input type="text" id="space-title" name="title"
+                        placeholder="Ex: Apartamento aconchegante no centro" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="space-description">Descrição</label>
+                    <textarea id="space-description" name="description" rows="4"
+                        placeholder="Descreva os detalhes do seu espaço..." required></textarea>
+                </div>
+
+                <div class="form-row-2">
+                    <div class="input-group">
+                        <label for="space-checkin">Hora de check-in</label>
+                        <input type="time" id="space-checkin" name="checkinTime" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="space-checkout">Hora de check-out</label>
+                        <input type="time" id="space-checkout" name="checkoutTime" required>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+                <legend class="section-title">Localização</legend>
+
+                <div class="input-group">
+                    <label for="address-search">Busca de endereço</label>
+                    <input type="text" id="address-search" placeholder="Digite a rua, bairro ou cidade...">
+                </div>
+
+                <div class="input-group">
+                    <label for="address-selected">Endereço selecionado</label>
+                    <input type="text" id="address-selected" readonly
+                        placeholder="O endereço selecionado aparecerá aqui" required>
+                </div>
+
+                <div id="map-location-picker" class="google-map-container"
+                    aria-label="Mapa para ajustar o pino de localização">
+                    <!-- O mapa será renderizado via JavaScript -->
+                </div>
+
+                <!-- Campos Ocultos para armazenar os detalhes do endereço selecionado -->
+                <input type="hidden" id="addr-street" name="street">
+                <input type="hidden" id="addr-number" name="number">
+                <input type="hidden" id="addr-neighborhood" name="neighborhood">
+                <input type="hidden" id="addr-city" name="city">
+                <input type="hidden" id="addr-state" name="state">
+                <input type="hidden" id="addr-zip" name="zipCode">
+                <input type="hidden" id="addr-lat" name="latitude">
+                <input type="hidden" id="addr-lng" name="longitude">
+            </fieldset>
+
+            <fieldset class="form-section">
+                <legend class="section-title">Fotos do espaço</legend>
+
+                <label class="upload-dropzone">
+                    <input type="file" id="space-photos" name="photos" multiple
+                        accept="image/png, image/jpeg, image/webp" class="sr-only" required>
+
+                    <div class="upload-dropzone-content">
+                        <!-- Ícone de Upload / Imagem com aria-hidden="true" -->
+
+                        <span class="upload-title">Clique para enviar fotos</span>
+                        <span class="upload-hint">PNG, JPG ou WebP de até 10MB cada</span>
+                    </div>
+                </label>
+
+                <div id="photos-preview-grid" class="photos-preview-grid">
+                    <div class="photo-preview-item">
+                        <!-- alt dinâmico -->
+                        <img src="assets/images/placeholder-space-1.jpg" alt="Foto 1">
+                        <!-- aria-label dinâmico -->
+                        <button type="button" class="btn-remove-photo" aria-label="Remover foto 1">
+                            <!-- Ícone de Remover com aria-hidden="true" -->
+                        </button>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+                <legend class="section-title">Preço</legend>
+
+                <div class="input-group">
+                    <label for="price-per-night">Preço por noite</label>
+                    <input type="text" id="price-per-night" name="pricePerNight" placeholder="R$ 0,00"
+                        inputmode="decimal" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="cleaning-fee">Taxa de limpeza</label>
+                    <input type="text" id="cleaning-fee" name="cleaningFee" placeholder="R$ 0,00" inputmode="decimal"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label for="service-fee">Taxa de serviço</label>
+                    <input type="text" id="service-fee" name="serviceFee" placeholder="R$ 0,00" inputmode="decimal"
+                        required>
+                </div>
+
+                <div class="pricing-info-badge" role="note">
+                    <!-- Ícone de Informação com aria-hidden="true" -->
+                    <span>As taxas de limpeza e serviço serão aplicadas sobre o subtotal da reserva.</span>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+                <legend class="section-title">Comodidades</legend>
+                <p class="section-description">Selecione as comodidades disponíveis no seu espaço.</p>
+
+                <div class="selection-cards-grid">
+                    <label class="selection-card">
+                        <!-- value dinâmico -->
+                        <input type="checkbox" name="amenities" value="wifi" class="sr-only">
+                        <div class="selection-card-content">
+                            <!-- Ícone da Comodidade -->
+
+                            <!-- Texto dinâmico -->
+                            <span class="card-text">Wi-Fi de alta velocidade</span>
+
+                            <!-- Ícone de Check (Exibido via CSS quando checked) -->
+                        </div>
+                    </label>
+
+                    <label class="selection-card">
+                        <!-- value dinâmico -->
+                        <input type="checkbox" name="amenities" value="wifi" class="sr-only">
+                        <div class="selection-card-content">
+                            <!-- Ícone da Comodidade -->
+
+                            <!-- Texto dinâmico -->
+                            <span class="card-text">Wi-Fi de alta velocidade</span>
+
+                            <!-- Ícone de Check (Exibido via CSS quando checked) -->
+                        </div>
+                    </label>
+
+                    <label class="selection-card">
+                        <!-- value dinâmico -->
+                        <input type="checkbox" name="amenities" value="wifi" class="sr-only">
+                        <div class="selection-card-content">
+                            <!-- Ícone da Comodidade -->
+
+                            <!-- Texto dinâmico -->
+                            <span class="card-text">Wi-Fi de alta velocidade</span>
+
+                            <!-- Ícone de Check (Exibido via CSS quando checked) -->
+                        </div>
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+                <legend class="section-title">Políticas</legend>
+                <p class="section-description">Selecione as políticas referentes ao seu espaço.</p>
+
+                <div class="selection-cards-grid">
+                    <label class="selection-card">
+                        <!-- value dinâmico -->
+                        <input type="checkbox" name="policies" value="no_parties" class="sr-only">
+                        <div class="selection-card-content">
+                            <!-- Ícone da Política -->
+
+                            <!-- Texto dinâmico -->
+                            <span class="card-text">Proibido festas ou eventos</span>
+                            <!-- Ícone de Check (Exibido via CSS quando checked) -->
+                        </div>
+                    </label>
+
+                    <label class="selection-card">
+                        <!-- value dinâmico -->
+                        <input type="checkbox" name="policies" value="no_parties" class="sr-only">
+                        <div class="selection-card-content">
+                            <!-- Ícone da Política -->
+
+                            <!-- Texto dinâmico -->
+                            <span class="card-text">Proibido festas ou eventos</span>
+                            <!-- Ícone de Check (Exibido via CSS quando checked) -->
+                        </div>
+                    </label>
+
+                    <label class="selection-card">
+                        <!-- value dinâmico -->
+                        <input type="checkbox" name="policies" value="no_parties" class="sr-only">
+                        <div class="selection-card-content">
+                            <!-- Ícone da Política -->
+
+                            <!-- Texto dinâmico -->
+                            <span class="card-text">Proibido festas ou eventos</span>
+                            <!-- Ícone de Check (Exibido via CSS quando checked) -->
+                        </div>
+                    </label>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpaceHub | Conectando lugares e pessoas</title>
+    <!-- PREENCHER COM A DESCRIÇÃO DO SITE -->
+    <meta name="description" content="">
+    <meta name="author" content="Júlio Simões">
+    <meta name="copyright" content="© 2026 Júlio Simões">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- PREENCHER COM O LINK DA FONTE -->
+    <link href="" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v0.0.3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
+
+    <!-- PREENCHER COM OS LINKS DO FAVICON -->
+    <link rel="icon" type="image/x-icon" href="">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="icon" type="image/png" sizes="16x16" href="">
+    <link rel="apple-touch-icon" sizes="180x180" href="">
+    <link rel="manifest" href="">
+
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#007deb">
+    <meta property="og:title" content="SpaceHub | Conectando lugares e pessoas">
+    <!-- PREENCHER COM A DESCRIÇÃO DO SITE -->
+    <meta property="og:description" content="">
+    <!-- PREENCHER OPEN GRAPH -->
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SpaceHub | Conectando lugares e pessoas">
+    <!-- PREENCHER COM IMAGEM DO OPEN GRAPH -->
+    <meta name="twitter:image" content="">
+    <!-- PREENCHER COM A DESCRIÇÃO DO SITE -->
+    <meta name="twitter:description" content="">
+    <!-- PREENCHER COM O LINK CANÔNICO -->
+    <link rel="canonical" href="">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js" defer></script>
+    <script src="script.js?v0.0.2" defer></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="header-wrapper">
+            <!-- Adicionar link para home -->
+            <a href="" class="logo-link">
+                <!-- Adicionar link da logo -->
+                <img src="" alt="SpaceHub" class="header-logo">
+            </a>
+
+            <nav class="menu-nav">
+                <ul>
+                    <li>
+                        <!-- Adicionar link -->
+                        <a class="nav-link is-active" href="">
+                            <!-- Adicionar ícone do link com aria-hidden="true" -->
+
+                            <!-- Texto dinâmico -->
+                            <span>Explorar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <!-- Adicionar link -->
+                        <a class="nav-link" href="">
+                            <!-- Adicionar ícone do link com aria-hidden="true" -->
+
+                            <!-- Texto dinâmico -->
+                            <span>Minhas reservas</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="user-menu-container">
+                <button id="btn-user-menu" class="user-menu-btn" aria-expanded="false" aria-haspopup="true"
+                    aria-controls="user-dropdown">
+                    <div class="user-avatar">
+                        <!-- Adicionar imagem do avatar com aria-hidden="true" -->
+                    </div>
+
+                    <div class="user-info">
+                        <!-- Texto dinâmico -->
+                        <span class="user-name">Olá, usuário</span>
+                        <!-- Texto dinâmico -->
+                        <span class="user-role">Hóspede</span>
+                    </div>
+
+                    <!-- Adicionar ícone de seta para baixo com aria-hidden="true" -->
+
+                </button>
+
+                <div id="user-dropdown" class="user-dropdown-menu hidden" role="menu" aria-labelledby="btn-user-menu">
+                    <ul role="none">
+                        <li role="none">
+                            <!-- Adicionar link de logout -->
+                            <a href="" class="dropdown-link logout-link" role="menuitem">
+                                <span>Sair da conta</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <button class="btn-menu-toggle" id="btn-open-menu" aria-label="Abrir menu de navegação"
+                aria-expanded="false" aria-controls="modal-menu">
+                <!-- Ícone de Menu / Hamburger com aria-hidden="true" -->
+            </button>
+        </div>
+    </header>
+
+    <main class="my-spaces-container">
+        <header class="page-header">
+            <div class="page-header-text">
+                <h1 class="page-title">Meus espaços</h1>
+                <p class="page-description">Gerencie seus espaços anunciados na plataforma.</p>
+            </div>
+
+            <!-- Link de ação para criar novo anúncio -->
+            <a href="" class="btn-primary btn-new-space" aria-label="Criar novo anúncio">
+                <!-- Ícone de adição com aria-hidden="true" -->
+                <span class="btn-text">Novo anúncio</span>
+            </a>
+        </header>
+
+        <section class="spaces-list-section" aria-label="Lista dos meus anúncios">
+            <div class="spaces-list">
+
+                <article class="space-crud-card">
+
+                    <div class="card-media">
+                        <!-- Adicionar imagem do espaço com aria-hidden="true" e alt dinâmico -->
+                        <img src="assets/images/placeholder-space-1.jpg"
+                            alt="Foto principal do espaço: Título do anúncio">
+                    </div>
+
+                    <div class="card-body">
+                        <!-- Texto dinâmico -->
+                        <h2 class="space-title">Título do anúncio</h2>
+
+                        <div class="space-location-badge">
+                            <!-- Ícone de localização com aria-hidden="true" -->
+
+                            <!-- Texto dinâmico -->
+                            <span>Rua biribiri, 123 - Frufru</span>
+                        </div>
+
+                        <div class="space-price">
+                            <!-- Texto dinâmico -->
+                            <span class="price-value">R$ 310</span>
+                            <span class="price-period">/ noite</span>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <!-- Link de ação para ver o anúncio e aria-label dinâmico -->
+                        <a href="" class="btn-action btn-view" aria-label="Ver anúncio Título do anúncio">
+                            <span>Ver anúncio</span>
+                            <!-- Ícone de redirecionamento com aria-hidden="true" -->
+                        </a>
+
+                        <!-- Link de ação para editar o anúncio e aria-label dinâmico -->
+                        <a href="" class="btn-action btn-edit" aria-label="Editar anúncio Título do anúncio">
+                            <span>Editar</span>
+                            <!-- Ícone de edição com aria-hidden="true" -->
+                        </a>
+
+                        <!-- Link de ação para excluir o anúncio e aria-label dinâmico -->
+                        <button type="button" class="btn-action btn-delete"
+                            aria-label="Excluir anúncio Título do anúncio">
+                            <span>Excluir</span>
+                            <!-- Ícone de exclusão com aria-hidden="true" -->
+                        </button>
+                    </div>
+                </article>
+
+                <article class="space-crud-card">
+
+                    <div class="card-media">
+                        <!-- Adicionar imagem do espaço com aria-hidden="true" e alt dinâmico -->
+                        <img src="assets/images/placeholder-space-1.jpg"
+                            alt="Foto principal do espaço: Título do anúncio">
+                    </div>
+
+                    <div class="card-body">
+                        <!-- Texto dinâmico -->
+                        <h2 class="space-title">Título do anúncio</h2>
+
+                        <div class="space-location-badge">
+                            <!-- Ícone de localização com aria-hidden="true" -->
+
+                            <!-- Texto dinâmico -->
+                            <span>Rua biribiri, 123 - Frufru</span>
+                        </div>
+
+                        <div class="space-price">
+                            <!-- Texto dinâmico -->
+                            <span class="price-value">R$ 310</span>
+                            <span class="price-period">/ noite</span>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <!-- Link de ação para ver o anúncio e aria-label dinâmico -->
+                        <a href="" class="btn-action btn-view" aria-label="Ver anúncio Título do anúncio">
+                            <span>Ver anúncio</span>
+                            <!-- Ícone de redirecionamento com aria-hidden="true" -->
+                        </a>
+
+                        <!-- Link de ação para editar o anúncio e aria-label dinâmico -->
+                        <a href="" class="btn-action btn-edit" aria-label="Editar anúncio Título do anúncio">
+                            <span>Editar</span>
+                            <!-- Ícone de edição com aria-hidden="true" -->
+                        </a>
+
+                        <!-- Link de ação para excluir o anúncio e aria-label dinâmico -->
+                        <button type="button" class="btn-action btn-delete"
+                            aria-label="Excluir anúncio Título do anúncio">
+                            <span>Excluir</span>
+                            <!-- Ícone de exclusão com aria-hidden="true" -->
+                        </button>
+                    </div>
+                </article>
+
+                <article class="space-crud-card">
+
+                    <div class="card-media">
+                        <!-- Adicionar imagem do espaço com aria-hidden="true" e alt dinâmico -->
+                        <img src="assets/images/placeholder-space-1.jpg"
+                            alt="Foto principal do espaço: Título do anúncio">
+                    </div>
+
+                    <div class="card-body">
+                        <!-- Texto dinâmico -->
+                        <h2 class="space-title">Título do anúncio</h2>
+
+                        <div class="space-location-badge">
+                            <!-- Ícone de localização com aria-hidden="true" -->
+
+                            <!-- Texto dinâmico -->
+                            <span>Rua biribiri, 123 - Frufru</span>
+                        </div>
+
+                        <div class="space-price">
+                            <!-- Texto dinâmico -->
+                            <span class="price-value">R$ 310</span>
+                            <span class="price-period">/ noite</span>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <!-- Link de ação para ver o anúncio e aria-label dinâmico -->
+                        <a href="" class="btn-action btn-view" aria-label="Ver anúncio Título do anúncio">
+                            <span>Ver anúncio</span>
+                            <!-- Ícone de redirecionamento com aria-hidden="true" -->
+                        </a>
+
+                        <!-- Link de ação para editar o anúncio e aria-label dinâmico -->
+                        <a href="" class="btn-action btn-edit" aria-label="Editar anúncio Título do anúncio">
+                            <span>Editar</span>
+                            <!-- Ícone de edição com aria-hidden="true" -->
+                        </a>
+
+                        <!-- Link de ação para excluir o anúncio e aria-label dinâmico -->
+                        <button type="button" class="btn-action btn-delete"
+                            aria-label="Excluir anúncio Título do anúncio">
+                            <span>Excluir</span>
+                            <!-- Ícone de exclusão com aria-hidden="true" -->
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+</body>
+
+</html>

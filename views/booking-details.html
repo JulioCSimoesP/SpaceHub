@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- PREENCHER COM O LINK DA FONTE -->
     <link href="" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v0.0.3">
+    <link rel="stylesheet" href="../style.css?v0.0.3">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
 
     <!-- PREENCHER COM OS LINKS DO FAVICON -->
@@ -43,7 +43,7 @@
     <!-- PREENCHER COM O LINK CANÔNICO -->
     <link rel="canonical" href="">
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js" defer></script>
-    <script src="script.js?v0.0.2" defer></script>
+    <script src="../script.js?v0.0.2" defer></script>
 </head>
 
 <body>
@@ -116,9 +116,9 @@
         </div>
     </header>
 
-    <main class="reservation-details-container">
+    <main class="booking-details-container">
 
-        <section class="reservation-details-header-section">
+        <section class="booking-details-header-section">
 
             <!-- Adicionar link para voltar -->
             <a href="" class="btn-back">
@@ -126,14 +126,14 @@
                 <span>Voltar para tela principal</span>
             </a>
 
-            <div class="reservation-title-wrapper">
+            <div class="booking-details-title-wrapper">
                 <h1 class="page-title">Detalhes da reserva</h1>
                 <!-- Badge de Status -->
                 <span class="status-badge status-confirmed">Confirmada</span>
             </div>
         </section>
 
-        <article class="reservation-space-card">
+        <article class="booking-details-space-card">
             <header class="space-card-header">
                 <h2 class="space-title">Título do anúncio</h2>
 
@@ -144,7 +144,7 @@
                 </div>
             </header>
 
-            <div id="reservation-map" class="google-map-container"
+            <div id="booking-details-map" class="google-map-container"
                 aria-label="Mapa com a localização do espaço reservado">
                 <!-- O mapa será renderizado via JavaScript -->
             </div>
@@ -187,7 +187,7 @@
         <section class="payment-summary-card">
             <h2 class="card-title">Resumo do pagamento</h2>
 
-            <dl class="reservation-booking-cost-summary">
+            <dl class="booking-details-cost-summary">
                 <div class="cost-row">
                     <!-- Texto dinâmico -->
                     <dt class="cost-label">R$ 310 × 5 noites</dt>
@@ -212,10 +212,10 @@
             </dl>
         </section>
 
-        <section class="reservation-info-card">
+        <section class="booking-details-info-card">
             <h2 class="card-title">Informações da reserva</h2>
 
-            <dl class="reservation-details-list">
+            <dl class="booking-details-list">
                 <div class="info-row">
                     <dt class="info-label">Check-in:</dt>
                     <!-- Texto e hora dinâmicos -->

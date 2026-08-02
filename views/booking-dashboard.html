@@ -116,46 +116,47 @@
         </div>
     </header>
 
-    <main class="my-spaces-container">
+    <main class="booking-dashboard-container">
         <header class="page-header">
             <div class="page-header-text">
-                <h1 class="page-title">Meus espaços</h1>
-                <p class="page-description">Gerencie seus espaços anunciados na plataforma.</p>
+                <h1 class="page-title">Reservas</h1>
+                <!-- O subtítulo pode mudar dinamicamente conforme o papel -->
+                <p class="page-description">Veja todas as reservas feitas nos seus espaços.</p>
             </div>
-
-            <!-- Link de ação para criar novo anúncio -->
-            <a href="" class="btn-primary btn-new-space" aria-label="Criar novo anúncio">
-                <!-- Ícone de adição com aria-hidden="true" -->
-                <span class="btn-text">Novo anúncio</span>
-            </a>
         </header>
 
-        <section class="spaces-list-section" aria-label="Lista dos meus anúncios">
+        <section class="booking-dashboard-filter-section" aria-label="Filtro de reservas por período">
+            <form id="form-filter-booking-dashboard" class="filter-form">
+                <div class="filter-dates-grid">
+                    <div class="input-group">
+                        <label for="filter-date-from">De:</label>
+                        <input type="date" id="filter-date-from" name="dateFrom">
+                    </div>
 
-            <div id="empty-spaces-state" class="empty-state-container hidden">
-                <div class="empty-state-icon">
-                    <!-- Ícone de espaço vazio com aria-hidden="true" -->
+                    <div class="input-group">
+                        <label for="filter-date-to">Até:</label>
+                        <input type="date" id="filter-date-to" name="dateTo">
+                    </div>
                 </div>
+            </form>
+        </section>
 
-                <h2 class="empty-state-title">Você ainda não possui nenhum espaço cadastrado</h2>
-                <p class="empty-state-description">Anuncie seu primeiro imóvel na plataforma e comece a receber
-                    hóspedes!</p>
+        <section class="booking-dashboard-list-section" aria-label="Lista de reservas">
 
-                <!-- Link de ação para criar novo espaço -->
-                <a href="" class="btn-primary btn-empty-action">
-                    <!-- Ícone de adição com aria-hidden="true" -->
-                    <span>Cadastrar meu primeiro espaço</span>
-                </a>
+            <div id="empty-state-booking-dashboard" class="empty-state-container hidden">
+                <div class="empty-state-icon">
+                    <!-- Ícone de reserva vazia com aria-hidden="true" -->
+                </div>
+                <h2 class="empty-state-title">Nenhuma reserva encontrada</h2>
+                <p class="empty-state-description">Não encontramos reservas registradas para o período selecionado.</p>
             </div>
 
-            <div class="spaces-list">
+            <div class="booking-dashboard-list">
 
-                <article class="space-crud-card">
-
+                <article class="booking-dashboard-card-item">
                     <div class="card-media">
-                        <!-- Adicionar imagem do espaço com aria-hidden="true" e alt dinâmico -->
-                        <img src="assets/images/placeholder-space-1.jpg"
-                            alt="Foto principal do espaço: Título do anúncio">
+                        <!-- Imagem com alt dinâmico contendo o título do anúncio -->
+                        <img src="assets/images/placeholder-space-1.jpg" alt="Foto do imóvel: Título do anúncio">
                     </div>
 
                     <div class="card-body">
@@ -163,47 +164,44 @@
                         <h2 class="space-title">Título do anúncio</h2>
 
                         <div class="space-location-badge">
-                            <!-- Ícone de localização com aria-hidden="true" -->
+                            <!-- Ícone de Localização -->
 
                             <!-- Texto dinâmico -->
                             <span>Rua biribiri, 123 - Frufru</span>
                         </div>
 
-                        <div class="space-price">
-                            <!-- Texto dinâmico -->
-                            <span class="price-value">R$ 310</span>
-                            <span class="price-period">/ noite</span>
+                        <dl class="booking-stay-dates">
+                            <div class="stay-date-row">
+                                <dt class="stay-label">Check-in:</dt>
+                                <!-- Texto dinâmico -->
+                                <dd class="stay-value">01/01/1999</dd>
+                            </div>
+                            <div class="stay-date-row">
+                                <dt class="stay-label">Check-out:</dt>
+                                <!-- Texto dinâmico -->
+                                <dd class="stay-value">01/01/1999</dd>
+                            </div>
+                        </dl>
+
+                        <div class="booking-status-wrapper">
+                            <span class="status-badge status-confirmed">Confirmada</span>
                         </div>
                     </div>
 
                     <div class="card-actions">
-                        <!-- Link de ação para ver o anúncio e aria-label dinâmico -->
-                        <a href="" class="btn-action btn-view" aria-label="Ver anúncio Título do anúncio">
-                            <span>Ver anúncio</span>
+                        <!-- Adicionar link para ver detalhes da reserva -->
+                        <a href="" class="btn-action btn-view"
+                            aria-label="Ver detalhes da reserva para Título do anúncio">
+                            <span>Ver detalhes</span>
                             <!-- Ícone de redirecionamento com aria-hidden="true" -->
                         </a>
-
-                        <!-- Link de ação para editar o anúncio e aria-label dinâmico -->
-                        <a href="" class="btn-action btn-edit" aria-label="Editar anúncio Título do anúncio">
-                            <span>Editar</span>
-                            <!-- Ícone de edição com aria-hidden="true" -->
-                        </a>
-
-                        <!-- Link de ação para excluir o anúncio e aria-label dinâmico -->
-                        <button type="button" class="btn-action btn-delete"
-                            aria-label="Excluir anúncio Título do anúncio">
-                            <span>Excluir</span>
-                            <!-- Ícone de exclusão com aria-hidden="true" -->
-                        </button>
                     </div>
                 </article>
 
-                <article class="space-crud-card">
-
+                <article class="booking-dashboard-card-item">
                     <div class="card-media">
-                        <!-- Adicionar imagem do espaço com aria-hidden="true" e alt dinâmico -->
-                        <img src="assets/images/placeholder-space-1.jpg"
-                            alt="Foto principal do espaço: Título do anúncio">
+                        <!-- Imagem com alt dinâmico contendo o título do anúncio -->
+                        <img src="assets/images/placeholder-space-1.jpg" alt="Foto do imóvel: Título do anúncio">
                     </div>
 
                     <div class="card-body">
@@ -211,47 +209,44 @@
                         <h2 class="space-title">Título do anúncio</h2>
 
                         <div class="space-location-badge">
-                            <!-- Ícone de localização com aria-hidden="true" -->
+                            <!-- Ícone de Localização -->
 
                             <!-- Texto dinâmico -->
                             <span>Rua biribiri, 123 - Frufru</span>
                         </div>
 
-                        <div class="space-price">
-                            <!-- Texto dinâmico -->
-                            <span class="price-value">R$ 310</span>
-                            <span class="price-period">/ noite</span>
+                        <dl class="booking-stay-dates">
+                            <div class="stay-date-row">
+                                <dt class="stay-label">Check-in:</dt>
+                                <!-- Texto dinâmico -->
+                                <dd class="stay-value">01/01/1999</dd>
+                            </div>
+                            <div class="stay-date-row">
+                                <dt class="stay-label">Check-out:</dt>
+                                <!-- Texto dinâmico -->
+                                <dd class="stay-value">01/01/1999</dd>
+                            </div>
+                        </dl>
+
+                        <div class="booking-status-wrapper">
+                            <span class="status-badge status-confirmed">Confirmada</span>
                         </div>
                     </div>
 
                     <div class="card-actions">
-                        <!-- Link de ação para ver o anúncio e aria-label dinâmico -->
-                        <a href="" class="btn-action btn-view" aria-label="Ver anúncio Título do anúncio">
-                            <span>Ver anúncio</span>
+                        <!-- Adicionar link para ver detalhes da reserva -->
+                        <a href="" class="btn-action btn-view"
+                            aria-label="Ver detalhes da reserva para Título do anúncio">
+                            <span>Ver detalhes</span>
                             <!-- Ícone de redirecionamento com aria-hidden="true" -->
                         </a>
-
-                        <!-- Link de ação para editar o anúncio e aria-label dinâmico -->
-                        <a href="" class="btn-action btn-edit" aria-label="Editar anúncio Título do anúncio">
-                            <span>Editar</span>
-                            <!-- Ícone de edição com aria-hidden="true" -->
-                        </a>
-
-                        <!-- Link de ação para excluir o anúncio e aria-label dinâmico -->
-                        <button type="button" class="btn-action btn-delete"
-                            aria-label="Excluir anúncio Título do anúncio">
-                            <span>Excluir</span>
-                            <!-- Ícone de exclusão com aria-hidden="true" -->
-                        </button>
                     </div>
                 </article>
 
-                <article class="space-crud-card">
-
+                <article class="booking-dashboard-card-item">
                     <div class="card-media">
-                        <!-- Adicionar imagem do espaço com aria-hidden="true" e alt dinâmico -->
-                        <img src="assets/images/placeholder-space-1.jpg"
-                            alt="Foto principal do espaço: Título do anúncio">
+                        <!-- Imagem com alt dinâmico contendo o título do anúncio -->
+                        <img src="assets/images/placeholder-space-1.jpg" alt="Foto do imóvel: Título do anúncio">
                     </div>
 
                     <div class="card-body">
@@ -259,38 +254,37 @@
                         <h2 class="space-title">Título do anúncio</h2>
 
                         <div class="space-location-badge">
-                            <!-- Ícone de localização com aria-hidden="true" -->
+                            <!-- Ícone de Localização -->
 
                             <!-- Texto dinâmico -->
                             <span>Rua biribiri, 123 - Frufru</span>
                         </div>
 
-                        <div class="space-price">
-                            <!-- Texto dinâmico -->
-                            <span class="price-value">R$ 310</span>
-                            <span class="price-period">/ noite</span>
+                        <dl class="booking-stay-dates">
+                            <div class="stay-date-row">
+                                <dt class="stay-label">Check-in:</dt>
+                                <!-- Texto dinâmico -->
+                                <dd class="stay-value">01/01/1999</dd>
+                            </div>
+                            <div class="stay-date-row">
+                                <dt class="stay-label">Check-out:</dt>
+                                <!-- Texto dinâmico -->
+                                <dd class="stay-value">01/01/1999</dd>
+                            </div>
+                        </dl>
+
+                        <div class="booking-status-wrapper">
+                            <span class="status-badge status-confirmed">Confirmada</span>
                         </div>
                     </div>
 
                     <div class="card-actions">
-                        <!-- Link de ação para ver o anúncio e aria-label dinâmico -->
-                        <a href="" class="btn-action btn-view" aria-label="Ver anúncio Título do anúncio">
-                            <span>Ver anúncio</span>
+                        <!-- Adicionar link para ver detalhes da reserva -->
+                        <a href="" class="btn-action btn-view"
+                            aria-label="Ver detalhes da reserva para Título do anúncio">
+                            <span>Ver detalhes</span>
                             <!-- Ícone de redirecionamento com aria-hidden="true" -->
                         </a>
-
-                        <!-- Link de ação para editar o anúncio e aria-label dinâmico -->
-                        <a href="" class="btn-action btn-edit" aria-label="Editar anúncio Título do anúncio">
-                            <span>Editar</span>
-                            <!-- Ícone de edição com aria-hidden="true" -->
-                        </a>
-
-                        <!-- Link de ação para excluir o anúncio e aria-label dinâmico -->
-                        <button type="button" class="btn-action btn-delete"
-                            aria-label="Excluir anúncio Título do anúncio">
-                            <span>Excluir</span>
-                            <!-- Ícone de exclusão com aria-hidden="true" -->
-                        </button>
                     </div>
                 </article>
 

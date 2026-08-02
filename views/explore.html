@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpaceHub | Conectando lugares e pessoas</title>
+    <!-- PREENCHER COM A DESCRIÇÃO DO SITE -->
+    <meta name="description" content="">
+    <meta name="author" content="Júlio Simões">
+    <meta name="copyright" content="© 2026 Júlio Simões">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- PREENCHER COM O LINK DA FONTE -->
+    <link href="" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v0.0.3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
+
+    <!-- PREENCHER COM OS LINKS DO FAVICON -->
+    <link rel="icon" type="image/x-icon" href="">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="icon" type="image/png" sizes="16x16" href="">
+    <link rel="apple-touch-icon" sizes="180x180" href="">
+    <link rel="manifest" href="">
+
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#007deb">
+    <meta property="og:title" content="SpaceHub | Conectando lugares e pessoas">
+    <!-- PREENCHER COM A DESCRIÇÃO DO SITE -->
+    <meta property="og:description" content="">
+    <!-- PREENCHER OPEN GRAPH -->
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SpaceHub | Conectando lugares e pessoas">
+    <!-- PREENCHER COM IMAGEM DO OPEN GRAPH -->
+    <meta name="twitter:image" content="">
+    <!-- PREENCHER COM A DESCRIÇÃO DO SITE -->
+    <meta name="twitter:description" content="">
+    <!-- PREENCHER COM O LINK CANÔNICO -->
+    <link rel="canonical" href="">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js" defer></script>
+    <script src="../script.js?v0.0.2" defer></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="header-wrapper">
+            <!-- Adicionar link para home -->
+            <a href="" class="logo-link">
+                <!-- Adicionar link da logo -->
+                <img src="" alt="SpaceHub" class="header-logo">
+            </a>
+
+            <nav class="menu-nav">
+                <ul>
+                    <li>
+                        <!-- Adicionar link -->
+                        <a class="nav-link is-active" href="">
+                            <!-- Adicionar ícone do link com aria-hidden="true" -->
+
+                            <!-- Texto dinâmico -->
+                            <span>Explorar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <!-- Adicionar link -->
+                        <a class="nav-link" href="">
+                            <!-- Adicionar ícone do link com aria-hidden="true" -->
+
+                            <!-- Texto dinâmico -->
+                            <span>Minhas reservas</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="user-menu-container">
+                <button id="btn-user-menu" class="user-menu-btn" aria-expanded="false" aria-haspopup="true"
+                    aria-controls="user-dropdown">
+                    <div class="user-avatar">
+                        <!-- Adicionar imagem do avatar com aria-hidden="true" -->
+                    </div>
+
+                    <div class="user-info">
+                        <!-- Texto dinâmico -->
+                        <span class="user-name">Olá, usuário</span>
+                        <!-- Texto dinâmico -->
+                        <span class="user-role">Hóspede</span>
+                    </div>
+
+                    <!-- Adicionar ícone de seta para baixo com aria-hidden="true" -->
+
+                </button>
+
+                <div id="user-dropdown" class="user-dropdown-menu hidden" role="menu" aria-labelledby="btn-user-menu">
+                    <ul role="none">
+                        <li role="none">
+                            <!-- Adicionar link de logout -->
+                            <a href="" class="dropdown-link logout-link" role="menuitem">
+                                <span>Sair da conta</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <button class="btn-menu-toggle" id="btn-open-menu" aria-label="Abrir menu de navegação"
+                aria-expanded="false" aria-controls="modal-menu">
+                <!-- Ícone de Menu / Hamburger com aria-hidden="true" -->
+            </button>
+        </div>
+    </header>
+
+    <main class="explore-container">
+
+        <section class="explore-search-section" aria-label="Busca de espaços">
+            <form id="form-explore-search" class="search-card-form" role="search">
+                <div class="input-group">
+                    <label for="explore-search-input">Onde você deseja ir?</label>
+                    <input type="text" id="explore-search-input" name="location"
+                        placeholder="Ex: Avenida Paulista, São Paulo - SP" autocomplete="off">
+                </div>
+
+                <div class="search-actions-grid">
+                    <button type="submit" class="btn-primary">
+                        <span>Buscar</span>
+                    </button>
+
+                    <button type="button" id="btn-open-filters" class="btn-secondary" aria-haspopup="dialog"
+                        aria-expanded="false" aria-controls="modal-filters">
+                        <span>Filtros</span>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="explore-map-section" aria-label="Mapa de espaços próximos">
+            <header class="map-section-header">
+                <div class="map-header-text">
+                    <h1 class="page-title">Espaços mais próximos</h1>
+                    <!-- Texto dinâmico -->
+                    <p class="page-description">
+                        Resultados dentro de <span id="search-radius-val">5 km</span> da localização escolhida.
+                    </p>
+                </div>
+
+                <button type="button" id="btn-toggle-fullscreen-map" class="btn-secondary btn-toggle-map"
+                    aria-label="Expandir mapa para tela cheia">
+                    <span>Ver no mapa</span>
+                </button>
+            </header>
+
+            <div id="explore-map" class="google-map-container" aria-label="Mapa com localização dos espaços"></div>
+        </section>
+
+        <section class="explore-results-section" aria-label="Resultados da busca de espaços">
+
+            <div class="results-count-bar">
+                <span id="results-count" class="results-count-text" aria-live="polite">
+                    <!-- Texto dinâmico -->
+                    <strong>24</strong> espaços encontrados
+                </span>
+            </div>
+
+            <div id="empty-explore-state" class="empty-state-container hidden">
+                <div class="empty-state-icon">
+                    <!-- Ícone de Espaço Vazio com aria-hidden="true" -->
+                </div>
+                <h2 class="empty-state-title">Nenhum espaço encontrado</h2>
+                <p class="empty-state-description">Tente alterar sua busca ou filtros para encontrar mais
+                    opções.</p>
+            </div>
+
+            <div class="explore-spaces-grid">
+
+                <article class="explore-space-card">
+                    <div class="card-media">
+                        <!-- Imagem com alt dinâmico contendo o título do anúncio -->
+                        <img src="assets/images/placeholder-space-1.jpg" alt="Foto principal: Título do anúncio">
+                    </div>
+
+                    <div class="card-body">
+                        <!-- Texto dinâmico -->
+                        <h2 class="space-title">Título do anúncio</h2>
+
+                        <div class="space-location-badge">
+                            <!-- Ícone de Localização -->
+
+                            <!-- Texto dinâmico -->
+                            <span>Rua biribiri, 123 - Frufru</span>
+                        </div>
+
+                        <ul class="amenities-summary-list">
+                            <li class="amenity-item">
+                                <!-- Ícone dinâmico com aria-hidden="true" -->
+
+                                <!-- Texto dinâmico -->
+                                <span>Wi-Fi</span>
+                            </li>
+                            <li class="amenity-item">
+                                <!-- Ícone dinâmico com aria-hidden="true" -->
+
+                                <!-- Texto dinâmico -->
+                                <span>Ar-condicionado</span>
+                            </li>
+                            <li class="amenity-item">
+                                <!-- Ícone dinâmico com aria-hidden="true" -->
+
+                                <!-- Texto dinâmico -->
+                                <span>Estacionamento</span>
+                            </li>
+                            <li class="amenity-item amenity-item-more">
+                                <!-- Ícone dinâmico com aria-hidden="true" -->
+
+                                <!-- Texto dinâmico -->
+                                <span>+3 comodidades</span>
+                            </li>
+                        </ul>
+
+                        <div class="card-footer-row">
+                            <div class="space-price">
+                                <!-- Texto dinâmico -->
+                                <span class="price-value">R$ 310</span>
+                                <span class="price-period">/ noite</span>
+                            </div>
+
+                            <!-- Adicionar link para detalhes do anúncio com aria-label dinâmico -->
+                            <a href="" class="btn-primary" aria-label="Ver detalhes de Título do anúncio">
+                                <span>Ver detalhes</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="explore-space-card">
+                    <div class="card-media">
+                        <!-- Imagem com alt dinâmico contendo o título do anúncio -->
+                        <img src="assets/images/placeholder-space-1.jpg" alt="Foto principal: Título do anúncio">
+                    </div>
+
+                    <div class="card-body">
+                        <!-- Texto dinâmico -->
+                        <h2 class="space-title">Título do anúncio</h2>
+
+                        <div class="space-location-badge">
+                            <!-- Ícone de Localização -->
+
+                            <!-- Texto dinâmico -->
+                            <span>Rua biribiri, 123 - Frufru</span>
+                        </div>
+
+                        <ul class="amenities-summary-list">
+                            <li class="amenity-item">
+                                <!-- Ícone dinâmico com aria-hidden="true" -->
+
+                                <!-- Texto dinâmico -->
+                                <span>Wi-Fi</span>
+                            </li>
+                            <li class="amenity-item">
+                                <!-- Ícone dinâmico com aria-hidden="true" -->
+
+                                <!-- Texto dinâmico -->
+                                <span>Ar-condicionado</span>
+                            </li>
+                            <li class="amenity-item">
+                                <!-- Ícone dinâmico com aria-hidden="true" -->
+
+                                <!-- Texto dinâmico -->
+                                <span>Estacionamento</span>
+                            </li>
+                            <li class="amenity-item amenity-item-more">
+                                <!-- Ícone dinâmico com aria-hidden="true" -->
+
+                                <!-- Texto dinâmico -->
+                                <span>+3 comodidades</span>
+                            </li>
+                        </ul>
+
+                        <div class="card-footer-row">
+                            <div class="space-price">
+                                <!-- Texto dinâmico -->
+                                <span class="price-value">R$ 310</span>
+                                <span class="price-period">/ noite</span>
+                            </div>
+
+                            <!-- Adicionar link para detalhes do anúncio com aria-label dinâmico -->
+                            <a href="" class="btn-primary" aria-label="Ver detalhes de Título do anúncio">
+                                <span>Ver detalhes</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="explore-space-card">
+                    <div class="card-media">
+                        <!-- Imagem com alt dinâmico contendo o título do anúncio -->
+                        <img src="assets/images/placeholder-space-1.jpg" alt="Foto principal: Título do anúncio">
+                    </div>
+
+                    <div class="card-body">
+                        <!-- Texto dinâmico -->
+                        <h2 class="space-title">Título do anúncio</h2>
+
+                        <div class="space-location-badge">
+                            <!-- Ícone de Localização -->
+
+                            <!-- Texto dinâmico -->
+                            <span>Rua biribiri, 123 - Frufru</span>
+                        </div>
+
+                        <ul class="amenities-summary-list">
+                            <li class="amenity-item">
+                                <!-- Ícone dinâmico com aria-hidden="true" -->
+
+                                <!-- Texto dinâmico -->
+                                <span>Wi-Fi</span>
+                            </li>
+                            <li class="amenity-item">
+                                <!-- Ícone dinâmico com aria-hidden="true" -->
+
+                                <!-- Texto dinâmico -->
+                                <span>Ar-condicionado</span>
+                            </li>
+                            <li class="amenity-item">
+                                <!-- Ícone dinâmico com aria-hidden="true" -->
+
+                                <!-- Texto dinâmico -->
+                                <span>Estacionamento</span>
+                            </li>
+                            <li class="amenity-item amenity-item-more">
+                                <!-- Ícone dinâmico com aria-hidden="true" -->
+
+                                <!-- Texto dinâmico -->
+                                <span>+3 comodidades</span>
+                            </li>
+                        </ul>
+
+                        <div class="card-footer-row">
+                            <div class="space-price">
+                                <!-- Texto dinâmico -->
+                                <span class="price-value">R$ 310</span>
+                                <span class="price-period">/ noite</span>
+                            </div>
+
+                            <!-- Adicionar link para detalhes do anúncio com aria-label dinâmico -->
+                            <a href="" class="btn-primary" aria-label="Ver detalhes de Título do anúncio">
+                                <span>Ver detalhes</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <nav class="pagination-footer" aria-label="Navegação por páginas de resultados">
+                <div class="items-per-page-control">
+                    <label for="items-per-page">Espaços por página:</label>
+                    <div class="select-wrapper">
+                        <select id="items-per-page" name="itemsPerPage">
+                            <option value="6">6</option>
+                            <option value="12" selected>12</option>
+                            <option value="24">24</option>
+                            <option value="48">48</option>
+                        </select>
+                    </div>
+                </div>
+
+                <span class="current-shown-items" aria-live="polite" aria-atomic="true"></span>
+
+                <div class="pagination-controls">
+                    <button type="button" id="btn-prev-page" class="page-btn" aria-label="Página anterior">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            fill="currentColor" viewBox="0 0 256 256">
+                            <path
+                                d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <div class="page-numbers-container"></div>
+
+                    <button type="button" id="btn-next-page" class="page-btn" aria-label="Próxima página">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            fill="currentColor" viewBox="0 0 256 256">
+                            <path
+                                d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </section>
+    </main>
+
+    <div id="modal-filters" class="modal-overlay hidden" role="dialog" aria-modal="true"
+        aria-labelledby="filters-title">
+        <div class="modal-container modal-filters-container">
+
+            <form id="form-advanced-filters" class="modal-filters-form">
+
+                <header class="modal-header">
+                    <h2 id="filters-title" class="modal-title">Filtros</h2>
+
+                    <button type="button" id="btn-close-filters" class="btn-close-modal"
+                        aria-label="Fechar modal de filtros">
+                        <!-- Ícone 'X' com aria-hidden="true" -->
+                    </button>
+
+                    <button type="reset" id="btn-reset-filters" class="btn-reset-filter">
+                        <!-- Ícone de Reset -->
+                        <span>Voltar ao padrão</span>
+                    </button>
+                </header>
+
+                <div class="modal-body">
+
+                    <fieldset class="filter-group">
+                        <div class="filter-label-header">
+                            <legend class="filter-group-title">Raio de busca</legend>
+                            <!-- Texto dinâmico -->
+                            <output id="radius-value-display" class="filter-value-badge" for="filter-radius">5
+                                km</output>
+                        </div>
+
+                        <div class="range-slider-single-wrapper">
+                            <input type="range" id="filter-radius" name="radius" min="1" max="50" step="1" value="5">
+                        </div>
+
+                        <div class="range-scale-labels">
+                            <span>1 km</span>
+                            <span>10 km</span>
+                            <span>25 km</span>
+                            <span>50 km</span>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="filter-group">
+                        <legend class="filter-group-title">Características</legend>
+
+                        <div class="selection-cards-grid filter-amenities-grid">
+
+                            <label class="selection-card">
+                                <!-- Valor dinâmico -->
+                                <input type="checkbox" name="amenities" value="wifi" class="sr-only">
+                                <div class="selection-card-content">
+                                    <!-- Ícone dinâmico com aria-hidden="true" -->
+
+                                    <!-- Texto dinâmico -->
+                                    <span class="card-text">Wi-Fi</span>
+                                    <!-- Ícone de check com aria-hidden="true" -->
+                                </div>
+                            </label>
+
+                            <label class="selection-card">
+                                <!-- Valor dinâmico -->
+                                <input type="checkbox" name="amenities" value="wifi" class="sr-only">
+                                <div class="selection-card-content">
+                                    <!-- Ícone dinâmico com aria-hidden="true" -->
+
+                                    <!-- Texto dinâmico -->
+                                    <span class="card-text">Wi-Fi</span>
+                                    <!-- Ícone de check com aria-hidden="true" -->
+                                </div>
+                            </label>
+
+                            <label class="selection-card">
+                                <!-- Valor dinâmico -->
+                                <input type="checkbox" name="amenities" value="wifi" class="sr-only">
+                                <div class="selection-card-content">
+                                    <!-- Ícone dinâmico com aria-hidden="true" -->
+
+                                    <!-- Texto dinâmico -->
+                                    <span class="card-text">Wi-Fi</span>
+                                    <!-- Ícone de check com aria-hidden="true" -->
+                                </div>
+                            </label>
+
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="filter-group">
+                        <div class="filter-label-header">
+                            <legend class="filter-group-title">Faixa de preço (por noite)</legend>
+                        </div>
+
+                        <div class="range-slider-double-wrapper">
+                            <!-- Valor dinâmico -->
+                            <input type="range" id="filter-min-price" name="minPrice" min="0" max="1000" value="0"
+                                step="10" aria-label="Preço mínimo">
+                            <!-- Valor dinâmico -->
+                            <input type="range" id="filter-max-price" name="maxPrice" min="0" max="1000" value="1000"
+                                step="10" aria-label="Preço máximo">
+                        </div>
+
+                        <div class="range-scale-labels">
+                            <!-- Texto dinâmico -->
+                            <span>R$ 0</span>
+                            <!-- Texto dinâmico -->
+                            <span>R$ 1.000+</span>
+                        </div>
+                    </fieldset>
+
+                </div>
+
+                <footer class="modal-footer">
+                    <button type="submit" class="btn-primary btn-block">Aplicar filtros</button>
+                </footer>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

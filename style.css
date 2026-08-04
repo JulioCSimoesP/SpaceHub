@@ -11,8 +11,8 @@
     --primary-color: #007deb;
     --secondary-color: #8a17e1;
     /* PREENCHER COM AS FONTES */
-    --font-primary: "", sans-serif;
-    --font-secondary: "", sans-serif;
+    --font-primary: "Nunito", sans-serif;
+    --font-secondary: "Inter", sans-serif;
 }
 
 * {
@@ -63,6 +63,13 @@ h2 {
     font-weight: 700;
 }
 
+h3 {
+    font-family: var(--font-primary);
+    font-size: 1.25rem;
+    color: var(--primary-text);
+    font-weight: 700;
+}
+
 .hidden {
     display: none !important;
 }
@@ -91,6 +98,344 @@ main {
     padding: 1.5rem 1.25rem 1.5rem 1.25rem;
     max-width: 1100px;
     margin: 0 auto
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-highlight);
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-family: var(--font-primary);
+    font-size: 0.875rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 125, 235, 0.2);
+}
+
+.btn-primary:active {
+    background-color: #0066c0;
+    transform: scale(0.98);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: calc(0.75rem - 2px);
+    font-family: var(--font-primary);
+    font-size: 0.875rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-secondary:active {
+    background-color: rgba(0, 125, 235, 0.1);
+    transform: scale(0.98);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-group label {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--secondary-text);
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"],
+.input-group input[type="tel"] {
+    width: 100%;
+    background-color: #EDF2F7;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-family: var(--font-secondary);
+    font-size: 0.875rem;
+    color: var(--primary-text);
+    outline: none;
+    -webkit-appearance: none;
+    line-height: 1.358;
+    cursor: text;
+}
+
+.input-group input:focus {
+    outline: 2px dashed var(--primary-color, #007deb);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.input-group input::placeholder {
+    color: var(--terciary-text, #9CA3AF);
+    opacity: 0.7;
+}
+
+.input-row {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.input-row .input-group {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Components & Sections: Login */
+
+body.auth-page {
+    width: 100%;
+    
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), 
+        url("../assets/images/office-background.jpg");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.auth-hero {
+    display: flex;
+    justify-content: center;
+}
+
+.auth-hero-content {
+    width: 100%;
+}
+
+.auth-logo-container {
+    margin-bottom: 2rem;
+}
+
+.auth-logo {
+    width: 75%;
+    max-width: 300px;
+}
+
+.auth-slogan {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-highlight);
+    letter-spacing: 0.05em;
+    max-width: 300px;
+}
+
+.feature-item{
+    display: none;
+}
+
+#modal-login,
+#modal-register {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent; 
+    z-index: 60;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#modal-login.hidden,
+#modal-register.hidden {
+    display: flex !important;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+#modal-login .modal-content.auth-card,
+#modal-register .modal-content.auth-card{
+    background-color: var(--secondary-bg);
+    width: 100%;
+    max-width: 420px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 24px 24px 0 0;
+    padding: 1rem;
+    box-shadow: 0 -10px 25px -5px rgba(0, 0, 0, 0.15);
+    transform: translateY(0);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#modal-login.hidden .modal-content,
+#modal-register.hidden .modal-content {
+    transform: translateY(100%);
+}
+
+.modal-header {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.auth-title {
+    font-family: var(--font-primary);
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--primary-text);
+}
+
+#modal-login .auth-title {
+    margin-bottom: 0.5rem;
+}
+
+.auth-description {
+    font-size: 0.875rem;
+    color: var(--terciary-text);
+    line-height: 1.4;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-password-wrapper input {
+    padding-right: 3rem !important;
+}
+
+.btn-toggle-password {
+    position: absolute;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: var(--terciary-text);
+}
+
+.btn-toggle-password svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
+.auth-form .btn-primary {
+    margin-top: 0.5rem;
+}
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--terciary-text);
+    font-size: 0.875rem;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.auth-divider span {
+    padding: 0 1rem;
+}
+
+.profile-radio-cards-container {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.profile-radio-card {
+    flex: 1;
+    cursor: pointer;
+    min-width: 0;
+}
+
+.profile-radio-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem;
+    background-color: #F3F4F6;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease, outline 0.2s ease, outline-offset 0.2s ease;
+}
+
+.profile-radio-card-title {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--primary-text);
+    margin-bottom: 0.3125rem;
+}
+
+.profile-radio-card-description {
+    font-size: 0.75rem;
+    color: var(--terciary-text);
+    line-height: 1.2;
+}
+
+.profile-radio-card:hover .profile-radio-card-content {
+    background-color: #E5E7EB;
+}
+
+.profile-radio-card input[type="radio"]:checked + .profile-radio-card-content {
+    background-color: #EFF6FF;
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0, 125, 235, 0.15);
+}
+
+.profile-radio-card input[type="radio"]:checked + .profile-radio-card-content .profile-radio-card-icon {
+    color: var(--primary-color);
+}
+
+.profile-radio-card input[type="radio"]:checked + .profile-radio-card-content .profile-radio-card-title {
+    color: var(--primary-color);
+}
+
+.profile-radio-card input[type="radio"]:focus-visible + .profile-radio-card-content {
+    outline: 2px dashed var(--primary-color);
+    outline-offset: 2px;
+}
+
+.profile-radio-selection-group {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-radio-selection-group .field-label {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--secondary-text);
+    padding: 0;
+    margin-bottom: 0.5rem;
 }
 
 /* Breakpoints */

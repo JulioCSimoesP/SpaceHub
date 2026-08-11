@@ -167,7 +167,6 @@
             </div>
         </section>
 
-        <!-- Galeria de Fotos Fancybox -->
         <!-- Todas as imagens com "a href", "a data-caption", "img src" e "img alt" dinâmicos (a data-caption = img alt) -->
         <section class="space-gallery-section" aria-label="Galeria de fotos do anúncio">
             <div class="gallery-grid">
@@ -207,268 +206,281 @@
             </div>
         </section>
 
-        <section class="space-description-section">
-            <h2 class="section-title">Sobre o espaço</h2>
-            <!-- Texto dinâmico -->
-            <p class="space-description-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.
-            </p>
+        <div class="space-content-layout">
 
-            <div class="space-schedule-highlights">
-                <div class="schedule-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
-                        viewBox="0 0 256 256">
-                        <path
-                            d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z">
-                        </path>
-                    </svg>
-                    <div>
-                        <span class="schedule-label">Check-in:</span>
-                        <!-- Texto dinâmico -->
-                        <span class="schedule-time">A partir das 14:00</span>
-                    </div>
-                </div>
-
-                <div class="schedule-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
-                        <path
-                            d="M232,136.66A104.12,104.12,0,1,1,119.34,24,8,8,0,0,1,120.66,40,88.12,88.12,0,1,0,216,135.34,8,8,0,0,1,232,136.66ZM120,72v56a8,8,0,0,0,8,8h56a8,8,0,0,0,0-16H136V72a8,8,0,0,0-16,0Zm40-24a12,12,0,1,0-12-12A12,12,0,0,0,160,48Zm36,24a12,12,0,1,0-12-12A12,12,0,0,0,196,72Zm24,36a12,12,0,1,0-12-12A12,12,0,0,0,220,108Z">
-                        </path>
-                    </svg>
-                    <div>
-                        <span class="schedule-label">Check-out:</span>
-                        <!-- Texto dinâmico -->
-                        <span class="schedule-time">Até as 11:00</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="space-amenities-section">
-            <h2 class="section-title">Comodidades</h2>
-
-            <ul class="amenities-list" id="amenities-list-object">
-                <li class="amenity-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
-                        viewBox="0 0 256 256">
-                        <path
-                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
-                        </path>
-                    </svg>
-
+            <div class="space-main-details">
+                <section class="space-description-section">
+                    <h2 class="section-title">Sobre o espaço</h2>
                     <!-- Texto dinâmico -->
-                    <span>Wi-Fi de alta velocidade</span>
-                </li>
-                <li class="amenity-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
-                        viewBox="0 0 256 256">
-                        <path
-                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
-                        </path>
-                    </svg>
+                    <p class="space-description-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore
+                        et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip
+                        ex ea commodo consequat.
+                    </p>
 
-                    <!-- Texto dinâmico -->
-                    <span>Ar-condicionado</span>
-                </li>
-                <li class="amenity-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
-                        viewBox="0 0 256 256">
-                        <path
-                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
-                        </path>
-                    </svg>
-
-                    <!-- Texto dinâmico -->
-                    <span>Estacionamento gratuito</span>
-                </li>
-                <li class="amenity-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
-                        viewBox="0 0 256 256">
-                        <path
-                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
-                        </path>
-                    </svg>
-
-                    <!-- Texto dinâmico -->
-                    <span>Cozinha completa</span>
-                </li>
-
-                <li class="amenity-item extra-item hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
-                        viewBox="0 0 256 256">
-                        <path
-                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
-                        </path>
-                    </svg>
-
-                    <!-- Texto dinâmico -->
-                    <span>TV 4K com Netflix</span>
-                </li>
-                <li class="amenity-item extra-item hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
-                        viewBox="0 0 256 256">
-                        <path
-                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
-                        </path>
-                    </svg>
-
-                    <!-- Texto dinâmico -->
-                    <span>Piscina privativa</span>
-                </li>
-            </ul>
-
-            <button type="button" id="btn-toggle-amenities" class="btn-toggle-expand" aria-expanded="false"
-                aria-controls="amenities-list-object">
-                <span>Mostrar mais</span>
-                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
-                    viewBox="0 0 256 256">
-                    <path
-                        d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z">
-                    </path>
-                </svg>
-            </button>
-        </section>
-
-        <section class="booking-card-section">
-            <div class="booking-card">
-                <div class="booking-price-header">
-                    <!-- Texto dinâmico -->
-                    <span class="booking-price">R$ 310</span>
-                    <!-- Texto dinâmico -->
-                    <span class="booking-period">/ noite</span>
-                </div>
-
-                <form id="form-booking" class="booking-form">
-                    <div class="booking-dates-grid">
-                        <div class="input-group">
-                            <label for="booking-checkin">Check-in</label>
-                            <input type="date" id="booking-checkin" name="checkin" required>
+                    <div class="space-schedule-highlights">
+                        <div class="schedule-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z">
+                                </path>
+                            </svg>
+                            <div>
+                                <span class="schedule-label">Check-in:</span>
+                                <!-- Texto dinâmico -->
+                                <span class="schedule-time">A partir das 14:00</span>
+                            </div>
                         </div>
 
-                        <div class="input-group">
-                            <label for="booking-checkout">Check-out</label>
-                            <input type="date" id="booking-checkout" name="checkout" required>
+                        <div class="schedule-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M232,136.66A104.12,104.12,0,1,1,119.34,24,8,8,0,0,1,120.66,40,88.12,88.12,0,1,0,216,135.34,8,8,0,0,1,232,136.66ZM120,72v56a8,8,0,0,0,8,8h56a8,8,0,0,0,0-16H136V72a8,8,0,0,0-16,0Zm40-24a12,12,0,1,0-12-12A12,12,0,0,0,160,48Zm36,24a12,12,0,1,0-12-12A12,12,0,0,0,196,72Zm24,36a12,12,0,1,0-12-12A12,12,0,0,0,220,108Z">
+                                </path>
+                            </svg>
+                            <div>
+                                <span class="schedule-label">Check-out:</span>
+                                <!-- Texto dinâmico -->
+                                <span class="schedule-time">Até as 11:00</span>
+                            </div>
                         </div>
                     </div>
+                </section>
 
-                    <dl class="space-booking-cost-summary">
-                        <div class="cost-row">
-                            <!-- Texto dinâmico -->
-                            <dt class="cost-label">R$ 310 × 5 noites</dt>
-                            <!-- Texto dinâmico -->
-                            <dd class="cost-value">R$ 1.550,00</dd>
-                        </div>
-                        <div class="cost-row">
-                            <dt class="cost-label">Taxa de limpeza</dt>
-                            <!-- Texto dinâmico -->
-                            <dd class="cost-value">R$ 80,00</dd>
-                        </div>
-                        <div class="cost-row">
-                            <dt class="cost-label">Taxa de serviço</dt>
-                            <!-- Texto dinâmico -->
-                            <dd class="cost-value">R$ 70,00</dd>
-                        </div>
-                        <div class="cost-row cost-total">
-                            <dt class="cost-label">Total</dt>
-                            <!-- Texto dinâmico -->
-                            <dd class="cost-value">R$ 1.700,00</dd>
-                        </div>
-                    </dl>
+                <section class="space-amenities-section">
+                    <h2 class="section-title">Comodidades</h2>
 
-                    <button type="submit" id="btn-submit-booking" class="btn-primary btn-block">
-                        Realizar reserva
+                    <ul class="amenities-list" id="amenities-list-object">
+                        <li class="amenity-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                                </path>
+                            </svg>
+
+                            <!-- Texto dinâmico -->
+                            <span>Wi-Fi de alta velocidade</span>
+                        </li>
+                        <li class="amenity-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                                </path>
+                            </svg>
+
+                            <!-- Texto dinâmico -->
+                            <span>Ar-condicionado</span>
+                        </li>
+                        <li class="amenity-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                                </path>
+                            </svg>
+
+                            <!-- Texto dinâmico -->
+                            <span>Estacionamento gratuito</span>
+                        </li>
+                        <li class="amenity-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                                </path>
+                            </svg>
+
+                            <!-- Texto dinâmico -->
+                            <span>Cozinha completa</span>
+                        </li>
+
+                        <li class="amenity-item extra-item hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                                </path>
+                            </svg>
+
+                            <!-- Texto dinâmico -->
+                            <span>TV 4K com Netflix</span>
+                        </li>
+                        <li class="amenity-item extra-item hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                                </path>
+                            </svg>
+
+                            <!-- Texto dinâmico -->
+                            <span>Piscina privativa</span>
+                        </li>
+                    </ul>
+
+                    <button type="button" id="btn-toggle-amenities" class="btn-toggle-expand" aria-expanded="false"
+                        aria-controls="amenities-list-object">
+                        <span>Mostrar mais</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                            viewBox="0 0 256 256">
+                            <path
+                                d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z">
+                            </path>
+                        </svg>
                     </button>
-                </form>
+                </section>
+
+                <section class="space-policies-section">
+                    <h2 class="section-title">Políticas do espaço</h2>
+
+                    <ul class="policies-list" id="policies-list-object">
+                        <li class="policy-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                                </path>
+                            </svg>
+
+                            <!-- Texto dinâmico -->
+                            <span>Check-in a partir das 14:00 / Check-out até 11:00</span>
+                        </li>
+                        <li class="policy-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                                </path>
+                            </svg>
+
+                            <!-- Texto dinâmico -->
+                            <span>Proibido festas ou eventos barulhentos</span>
+                        </li>
+                        <li class="policy-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                                </path>
+                            </svg>
+
+                            <!-- Texto dinâmico -->
+                            <span>Não é permitido fumar dentro do imóvel</span>
+                        </li>
+
+                        <li class="policy-item extra-item hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                                </path>
+                            </svg>
+
+                            <!-- Texto dinâmico -->
+                            <span>Não é permitido fumar dentro do imóvel</span>
+                        </li>
+                        <li class="policy-item extra-item hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                                </path>
+                            </svg>
+
+                            <!-- Texto dinâmico -->
+                            <span>Animais de estimação permitidos mediante taxa</span>
+                        </li>
+                    </ul>
+
+                    <button type="button" id="btn-toggle-policies" class="btn-toggle-expand" aria-expanded="false"
+                        aria-controls="policies-list-object">
+                        <span>Mostrar mais</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                            viewBox="0 0 256 256">
+                            <path
+                                d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z">
+                            </path>
+                        </svg>
+                    </button>
+                </section>
+
             </div>
-        </section>
 
-        <section class="space-location-section">
-            <h2 class="section-title">Localização</h2>
-            <!-- Texto dinâmico -->
-            <address class="space-full-address">
-                Rua biribiri, 123 - Tralalá, Frufru - AB<br>
-                CEP: 12345-789
-            </address>
+            <div class="space-sidebar-details">
+                <section class="booking-card-section">
+                    <div class="booking-card">
+                        <div class="booking-price-header">
+                            <!-- Texto dinâmico -->
+                            <span class="booking-price">R$ 310</span>
+                            <!-- Texto dinâmico -->
+                            <span class="booking-period">/ noite</span>
+                        </div>
 
-            <!-- Container da API do Google Maps (Alvo de renderização do JS via Lat/Lng) -->
-            <div id="space-map" class="google-map-container" aria-label="Mapa com localização exata do espaço"></div>
-        </section>
+                        <form id="form-booking" class="booking-form">
+                            <div class="booking-dates-grid">
+                                <div class="input-group">
+                                    <label for="booking-checkin">Check-in</label>
+                                    <input type="date" id="booking-checkin" name="checkin" required>
+                                </div>
 
-        <section class="space-policies-section">
-            <h2 class="section-title">Políticas do espaço</h2>
+                                <div class="input-group">
+                                    <label for="booking-checkout">Check-out</label>
+                                    <input type="date" id="booking-checkout" name="checkout" required>
+                                </div>
+                            </div>
 
-            <ul class="policies-list" id="policies-list-object">
-                <li class="policy-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
-                        viewBox="0 0 256 256">
-                        <path
-                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
-                        </path>
-                    </svg>
+                            <dl class="space-booking-cost-summary">
+                                <div class="cost-row">
+                                    <!-- Texto dinâmico -->
+                                    <dt class="cost-label">R$ 310 × 5 noites</dt>
+                                    <!-- Texto dinâmico -->
+                                    <dd class="cost-value">R$ 1.550,00</dd>
+                                </div>
+                                <div class="cost-row">
+                                    <dt class="cost-label">Taxa de limpeza</dt>
+                                    <!-- Texto dinâmico -->
+                                    <dd class="cost-value">R$ 80,00</dd>
+                                </div>
+                                <div class="cost-row">
+                                    <dt class="cost-label">Taxa de serviço</dt>
+                                    <!-- Texto dinâmico -->
+                                    <dd class="cost-value">R$ 70,00</dd>
+                                </div>
+                                <div class="cost-row cost-total">
+                                    <dt class="cost-label">Total</dt>
+                                    <!-- Texto dinâmico -->
+                                    <dd class="cost-value">R$ 1.700,00</dd>
+                                </div>
+                            </dl>
 
+                            <button type="submit" id="btn-submit-booking" class="btn-primary btn-block">
+                                Realizar reserva
+                            </button>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="space-location-section">
+                    <h2 class="section-title">Localização</h2>
                     <!-- Texto dinâmico -->
-                    <span>Check-in a partir das 14:00 / Check-out até 11:00</span>
-                </li>
-                <li class="policy-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
-                        viewBox="0 0 256 256">
-                        <path
-                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
-                        </path>
-                    </svg>
+                    <address class="space-full-address">
+                        Rua biribiri, 123 - Tralalá, Frufru - AB<br>
+                        CEP: 12345-789
+                    </address>
 
-                    <!-- Texto dinâmico -->
-                    <span>Proibido festas ou eventos barulhentos</span>
-                </li>
-                <li class="policy-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
-                        viewBox="0 0 256 256">
-                        <path
-                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
-                        </path>
-                    </svg>
-
-                    <!-- Texto dinâmico -->
-                    <span>Não é permitido fumar dentro do imóvel</span>
-                </li>
-
-                <li class="policy-item extra-item hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
-                        viewBox="0 0 256 256">
-                        <path
-                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
-                        </path>
-                    </svg>
-
-                    <!-- Texto dinâmico -->
-                    <span>Não é permitido fumar dentro do imóvel</span>
-                </li>
-                <li class="policy-item extra-item hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
-                        viewBox="0 0 256 256">
-                        <path
-                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
-                        </path>
-                    </svg>
-
-                    <!-- Texto dinâmico -->
-                    <span>Animais de estimação permitidos mediante taxa</span>
-                </li>
-            </ul>
-
-            <button type="button" id="btn-toggle-policies" class="btn-toggle-expand" aria-expanded="false"
-                aria-controls="policies-list-object">
-                <span>Mostrar mais</span>
-                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
-                    viewBox="0 0 256 256">
-                    <path
-                        d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z">
-                    </path>
-                </svg>
-            </button>
-        </section>
+                    <!-- Container da API do Google Maps (Alvo de renderização do JS via Lat/Lng) -->
+                    <div id="space-map" class="google-map-container" aria-label="Mapa com localização exata do espaço">
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
 
     <div id="modal-menu" class="modal-container hidden" role="dialog" aria-modal="true" aria-label="Menu de navegação">

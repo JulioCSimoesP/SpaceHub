@@ -921,6 +921,7 @@ body.auth-page {
     font-weight: 700;
     cursor: pointer;
     transition: color 0.2s ease;
+    font-size: 0.75rem;
 }
 
 .btn-toggle-expand svg {
@@ -1031,7 +1032,6 @@ body.auth-page {
 }
 
 .space-location-section {
-    margin-bottom: 1.5rem;
     padding: 1rem;
     background-color: var(--secondary-bg);
     border: 1px solid #E5E7EB;
@@ -1063,12 +1063,13 @@ body.auth-page {
     border: 1px solid #E5E7EB;
     border-radius: 12px;
     box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
 }
 
 .policies-list {
     list-style: none;
     display: flex;
-    flex-direction: column; /* 1 coluna no mobile para não espremer textos longos */
+    flex-direction: column;
     gap: 0.875rem;
     margin-bottom: 1rem;
     padding: 0;
@@ -1219,7 +1220,6 @@ body.auth-page {
 
     .user-menu-container {
         display: block;
-        /* Volta a aparecer no desktop */
         position: relative;
     }
 
@@ -1405,6 +1405,48 @@ body.auth-page {
     .profile-radio-selection-group .field-label {
         font-size: 0.9375rem;
     }
+
+    /* Components & Sections: Space Details */
+
+    .space-location-badge {
+        font-size: 0.9375rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: repeat(3, 140px);
+        gap: 0.75rem;
+    }
+
+    .gallery-item-main {
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+        height: 100%;
+    }
+
+    .gallery-item {
+        height: 100%;
+    }
+
+    .gallery-more-overlay {
+        font-size: 0.9375rem;
+    }
+
+    .btn-toggle-expand {
+        font-size: 0.8125rem;
+    }
+
+    .booking-price {
+        font-size: 1.375rem;
+    }
+
+    .booking-dates-grid input[type="date"] {
+        font-size: 0.9375rem;
+    }
+
+    .cost-row.cost-total {
+        font-size: 1.125rem;
+    }
 }
 
 @media (min-width: 1100px) {
@@ -1578,5 +1620,54 @@ body.auth-page {
 
     .profile-radio-selection-group .field-label {
         font-size: 1rem;
+    }
+
+    /* Components & Sections: Space Details */
+
+    .space-location-badge {
+        font-size: 1rem;
+    }
+
+    .btn-toggle-expand {
+        font-size: 0.875rem;
+    }
+
+    .booking-price {
+        font-size: 1.5rem;
+    }
+
+    .booking-dates-grid input[type="date"] {
+        font-size: 1rem;
+    }
+
+    .cost-row.cost-total {
+        font-size: 1.25rem;
+    }
+
+    .space-content-layout {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    .space-main-details {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .space-sidebar-details {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .space-description-section,
+    .space-amenities-section,
+    .space-policies-section,
+    .booking-card-section,
+    .space-location-section {
+        margin-bottom: 0;
     }
 }

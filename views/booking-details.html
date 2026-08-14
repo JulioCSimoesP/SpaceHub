@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- PREENCHER COM O LINK DA FONTE -->
     <link href="" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css?v0.0.3">
+    <link rel="stylesheet" href="../style.css?v0.0.9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
 
     <!-- PREENCHER COM OS LINKS DO FAVICON -->
@@ -52,8 +52,7 @@
         <div class="header-wrapper">
             <!-- Adicionar link para home -->
             <a href="" class="logo-link">
-                <!-- Adicionar link da logo -->
-                <img src="" alt="SpaceHub" class="header-logo">
+                <img src="../assets/images/logo.webp" alt="SpaceHub" class="header-logo">
             </a>
 
             <nav class="menu-nav">
@@ -61,8 +60,12 @@
                     <li>
                         <!-- Adicionar link -->
                         <a class="nav-link is-active" href="">
-                            <!-- Adicionar ícone do link com aria-hidden="true" -->
-
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z">
+                                </path>
+                            </svg>
                             <!-- Texto dinâmico -->
                             <span>Explorar</span>
                         </a>
@@ -70,8 +73,12 @@
                     <li>
                         <!-- Adicionar link -->
                         <a class="nav-link" href="">
-                            <!-- Adicionar ícone do link com aria-hidden="true" -->
-
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z">
+                                </path>
+                            </svg>
                             <!-- Texto dinâmico -->
                             <span>Minhas reservas</span>
                         </a>
@@ -83,7 +90,12 @@
                 <button id="btn-user-menu" class="user-menu-btn" aria-expanded="false" aria-haspopup="true"
                     aria-controls="user-dropdown">
                     <div class="user-avatar">
-                        <!-- Adicionar imagem do avatar com aria-hidden="true" -->
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                            viewBox="0 0 256 256">
+                            <path
+                                d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z">
+                            </path>
+                        </svg>
                     </div>
 
                     <div class="user-info">
@@ -93,15 +105,19 @@
                         <span class="user-role">Hóspede</span>
                     </div>
 
-                    <!-- Adicionar ícone de seta para baixo com aria-hidden="true" -->
-
                 </button>
 
                 <div id="user-dropdown" class="user-dropdown-menu hidden" role="menu" aria-labelledby="btn-user-menu">
                     <ul role="none">
                         <li role="none">
                             <!-- Adicionar link de logout -->
-                            <a href="" class="dropdown-link logout-link" role="menuitem">
+                            <a href="#" class="dropdown-link logout-link" role="menuitem">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                    fill="#000000" viewBox="0 0 256 256">
+                                    <path
+                                        d="M120,216a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V40a8,8,0,0,1,8-8h64a8,8,0,0,1,0,16H56V208h56A8,8,0,0,1,120,216Zm109.66-93.66-40-40a8,8,0,0,0-11.32,11.32L204.69,120H112a8,8,0,0,0,0,16h92.69l-26.35,26.34a8,8,0,0,0,11.32,11.32l40-40A8,8,0,0,0,229.66,122.34Z">
+                                    </path>
+                                </svg>
                                 <span>Sair da conta</span>
                             </a>
                         </li>
@@ -111,7 +127,12 @@
 
             <button class="btn-menu-toggle" id="btn-open-menu" aria-label="Abrir menu de navegação"
                 aria-expanded="false" aria-controls="modal-menu">
-                <!-- Ícone de Menu / Hamburger com aria-hidden="true" -->
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
+                    </path>
+                </svg>
             </button>
         </div>
     </header>
@@ -122,7 +143,12 @@
 
             <!-- Adicionar link para voltar -->
             <a href="" class="btn-back">
-                <!-- Ícone de seta para trás com aria-hidden="true" -->
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M232,144a64.07,64.07,0,0,1-64,64H80a8,8,0,0,1,0-16h88a48,48,0,0,0,0-96H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,45.66L51.31,80H168A64.07,64.07,0,0,1,232,144Z">
+                    </path>
+                </svg>
                 <span>Voltar para tela principal</span>
             </a>
 
@@ -151,22 +177,59 @@
 
             <ul class="amenities-summary-list">
                 <li class="amenity-item">
-                    <!-- Ícone da comodidade com aria-hidden="true" -->
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                        viewBox="0 0 256 256">
+                        <path
+                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                        </path>
+                    </svg>
 
                     <!-- Texto dinâmico -->
                     <span>Wi-Fi</span>
                 </li>
                 <li class="amenity-item">
-                    <!-- Ícone da comodidade com aria-hidden="true" -->
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                        viewBox="0 0 256 256">
+                        <path
+                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                        </path>
+                    </svg>
 
                     <!-- Texto dinâmico -->
-                    <span>Ar-condicionado</span>
+                    <span>Wi-Fi</span>
                 </li>
                 <li class="amenity-item">
-                    <!-- Ícone da comodidade com aria-hidden="true" -->
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                        viewBox="0 0 256 256">
+                        <path
+                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                        </path>
+                    </svg>
 
                     <!-- Texto dinâmico -->
-                    <span>Estacionamento</span>
+                    <span>Wi-Fi</span>
+                </li>
+                <li class="amenity-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                        viewBox="0 0 256 256">
+                        <path
+                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                        </path>
+                    </svg>
+
+                    <!-- Texto dinâmico -->
+                    <span>Wi-Fi</span>
+                </li>
+                <li class="amenity-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                        viewBox="0 0 256 256">
+                        <path
+                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                        </path>
+                    </svg>
+
+                    <!-- Texto dinâmico -->
+                    <span>Wi-Fi</span>
                 </li>
                 <!-- Último item contador ("+X comodidades") -->
                 <li class="amenity-item amenity-item-more">
@@ -178,7 +241,7 @@
             </ul>
 
             <!-- Link dinâmico -->
-            <a href="" class="btn-secondary btn-block">
+            <a href="" class="btn-primary">
                 <span>Ver anúncio completo</span>
                 <!-- Ícone de redirecionamento com aria-hidden="true" -->
             </a>
@@ -247,7 +310,12 @@
 
             <div class="user-profile-header">
                 <div class="user-avatar-large">
-                    <!-- Ícone ou tag <img> com a foto do usuário -->
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                        viewBox="0 0 256 256">
+                        <path
+                            d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z">
+                        </path>
+                    </svg>
                 </div>
                 <!-- Nome dinâmico -->
                 <span class="user-profile-name">Nome do anfitrião</span>
@@ -276,19 +344,34 @@
 
             <ul class="policies-full-list">
                 <li class="policy-item">
-                    <!-- Ícone da política com aria-hidden="true" -->
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                        viewBox="0 0 256 256">
+                        <path
+                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                        </path>
+                    </svg>
 
                     <!-- Texto dinâmico -->
                     <span>Check-in a partir das 14:00 / Check-out até 11:00</span>
                 </li>
                 <li class="policy-item">
-                    <!-- Ícone da política com aria-hidden="true" -->
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                        viewBox="0 0 256 256">
+                        <path
+                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                        </path>
+                    </svg>
 
                     <!-- Texto dinâmico -->
                     <span>Proibido festas ou eventos barulhentos</span>
                 </li>
                 <li class="policy-item">
-                    <!-- Ícone da política com aria-hidden="true" -->
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                        viewBox="0 0 256 256">
+                        <path
+                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                        </path>
+                    </svg>
 
                     <!-- Texto dinâmico -->
                     <span>Não é permitido fumar dentro do imóvel</span>

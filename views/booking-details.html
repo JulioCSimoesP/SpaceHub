@@ -247,137 +247,141 @@
             </a>
         </article>
 
-        <section class="payment-summary-card">
-            <h2 class="card-title">Resumo do pagamento</h2>
+        <div class="form-row-desktop">
+            <section class="payment-summary-card">
+                <h2 class="card-title">Resumo do pagamento</h2>
 
-            <dl class="booking-details-cost-summary">
-                <div class="cost-row">
-                    <!-- Texto dinâmico -->
-                    <dt class="cost-label">R$ 310 × 5 noites</dt>
-                    <!-- Texto dinâmico -->
-                    <dd class="cost-value">R$ 1.550,00</dd>
-                </div>
-                <div class="cost-row">
-                    <dt class="cost-label">Taxa de limpeza</dt>
-                    <!-- Texto dinâmico -->
-                    <dd class="cost-value">R$ 80,00</dd>
-                </div>
-                <div class="cost-row">
-                    <dt class="cost-label">Taxa de serviço</dt>
-                    <!-- Texto dinâmico -->
-                    <dd class="cost-value">R$ 70,00</dd>
-                </div>
-                <div class="cost-row cost-total">
-                    <dt class="cost-label">Total pago</dt>
-                    <!-- Texto dinâmico -->
-                    <dd class="cost-value">R$ 1.700,00</dd>
-                </div>
-            </dl>
-        </section>
+                <dl class="booking-details-cost-summary">
+                    <div class="cost-row">
+                        <!-- Texto dinâmico -->
+                        <dt class="cost-label">R$ 310 × 5 noites</dt>
+                        <!-- Texto dinâmico -->
+                        <dd class="cost-value">R$ 1.550,00</dd>
+                    </div>
+                    <div class="cost-row">
+                        <dt class="cost-label">Taxa de limpeza</dt>
+                        <!-- Texto dinâmico -->
+                        <dd class="cost-value">R$ 80,00</dd>
+                    </div>
+                    <div class="cost-row">
+                        <dt class="cost-label">Taxa de serviço</dt>
+                        <!-- Texto dinâmico -->
+                        <dd class="cost-value">R$ 70,00</dd>
+                    </div>
+                    <div class="cost-row cost-total">
+                        <dt class="cost-label">Total pago</dt>
+                        <!-- Texto dinâmico -->
+                        <dd class="cost-value">R$ 1.700,00</dd>
+                    </div>
+                </dl>
+            </section>
 
-        <section class="booking-details-info-card">
-            <h2 class="card-title">Informações da reserva</h2>
+            <section class="booking-details-info-card">
+                <h2 class="card-title">Informações da reserva</h2>
 
-            <dl class="booking-details-list">
-                <div class="info-row">
-                    <dt class="info-label">Check-in:</dt>
-                    <!-- Texto e hora dinâmicos -->
-                    <dd class="info-value">10/10/2026 às 14:00</dd>
+                <dl class="booking-details-list">
+                    <div class="info-row">
+                        <dt class="info-label">Check-in:</dt>
+                        <!-- Texto e hora dinâmicos -->
+                        <dd class="info-value">10/10/2026 às 14:00</dd>
+                    </div>
+                    <div class="info-row">
+                        <dt class="info-label">Check-out:</dt>
+                        <!-- Texto e hora dinâmicos -->
+                        <dd class="info-value">15/10/2026 às 11:00</dd>
+                    </div>
+                    <div class="info-row">
+                        <dt class="info-label">Duração da estadia:</dt>
+                        <!-- Texto dinâmico -->
+                        <dd class="info-value">5 dias</dd>
+                    </div>
+                    <div class="info-row">
+                        <dt class="info-label">Status:</dt>
+                        <!-- Status dinâmico -->
+                        <dd class="info-value">
+                            <span class="status-badge status-confirmed">Confirmada</span>
+                        </dd>
+                    </div>
+                </dl>
+            </section>
+        </div>
+
+        <div class="form-row-desktop">
+            <section class="user-profile-card">
+                <!-- Texto dinâmico -->
+                <h2 class="card-title">Informações do anfitrião</h2>
+
+                <div class="user-profile-header">
+                    <div class="user-avatar-large">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                            viewBox="0 0 256 256">
+                            <path
+                                d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <!-- Nome dinâmico -->
+                    <span class="user-profile-name">Nome do anfitrião</span>
                 </div>
-                <div class="info-row">
-                    <dt class="info-label">Check-out:</dt>
-                    <!-- Texto e hora dinâmicos -->
-                    <dd class="info-value">15/10/2026 às 11:00</dd>
-                </div>
-                <div class="info-row">
-                    <dt class="info-label">Duração da estadia:</dt>
-                    <!-- Texto dinâmico -->
-                    <dd class="info-value">5 dias</dd>
-                </div>
-                <div class="info-row">
-                    <dt class="info-label">Status:</dt>
-                    <!-- Status dinâmico -->
-                    <dd class="info-value">
-                        <span class="status-badge status-confirmed">Confirmada</span>
-                    </dd>
-                </div>
-            </dl>
-        </section>
 
-        <section class="user-profile-card">
-            <!-- Texto dinâmico -->
-            <h2 class="card-title">Informações do anfitrião</h2>
+                <dl class="user-contact-list">
+                    <div class="info-row">
+                        <dt class="info-label">Email:</dt>
+                        <!-- Email dinâmico com link mailto -->
+                        <dd class="info-value">
+                            <a href="mailto:loremipsum@lorem.com.br" class="contact-link">loremipsum@lorem.com.br</a>
+                        </dd>
+                    </div>
+                    <div class="info-row">
+                        <dt class="info-label">Telefone:</dt>
+                        <!-- Telefone dinâmico com link tel -->
+                        <dd class="info-value">
+                            <a href="tel:99999999999" class="contact-link">(99) 99999-9999</a>
+                        </dd>
+                    </div>
+                </dl>
+            </section>
 
-            <div class="user-profile-header">
-                <div class="user-avatar-large">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
-                        viewBox="0 0 256 256">
-                        <path
-                            d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z">
-                        </path>
-                    </svg>
-                </div>
-                <!-- Nome dinâmico -->
-                <span class="user-profile-name">Nome do anfitrião</span>
-            </div>
+            <section class="space-policies-card">
+                <h2 class="card-title">Políticas do espaço</h2>
 
-            <dl class="user-contact-list">
-                <div class="info-row">
-                    <dt class="info-label">Email:</dt>
-                    <!-- Email dinâmico com link mailto -->
-                    <dd class="info-value">
-                        <a href="mailto:loremipsum@lorem.com.br" class="contact-link">loremipsum@lorem.com.br</a>
-                    </dd>
-                </div>
-                <div class="info-row">
-                    <dt class="info-label">Telefone:</dt>
-                    <!-- Telefone dinâmico com link tel -->
-                    <dd class="info-value">
-                        <a href="tel:99999999999" class="contact-link">(99) 99999-9999</a>
-                    </dd>
-                </div>
-            </dl>
-        </section>
+                <ul class="policies-full-list">
+                    <li class="policy-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                            viewBox="0 0 256 256">
+                            <path
+                                d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                            </path>
+                        </svg>
 
-        <section class="space-policies-card">
-            <h2 class="card-title">Políticas do espaço</h2>
+                        <!-- Texto dinâmico -->
+                        <span>Check-in a partir das 14:00 / Check-out até 11:00</span>
+                    </li>
+                    <li class="policy-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                            viewBox="0 0 256 256">
+                            <path
+                                d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                            </path>
+                        </svg>
 
-            <ul class="policies-full-list">
-                <li class="policy-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
-                        viewBox="0 0 256 256">
-                        <path
-                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
-                        </path>
-                    </svg>
+                        <!-- Texto dinâmico -->
+                        <span>Proibido festas ou eventos barulhentos</span>
+                    </li>
+                    <li class="policy-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                            viewBox="0 0 256 256">
+                            <path
+                                d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                            </path>
+                        </svg>
 
-                    <!-- Texto dinâmico -->
-                    <span>Check-in a partir das 14:00 / Check-out até 11:00</span>
-                </li>
-                <li class="policy-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
-                        viewBox="0 0 256 256">
-                        <path
-                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
-                        </path>
-                    </svg>
-
-                    <!-- Texto dinâmico -->
-                    <span>Proibido festas ou eventos barulhentos</span>
-                </li>
-                <li class="policy-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
-                        viewBox="0 0 256 256">
-                        <path
-                            d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
-                        </path>
-                    </svg>
-
-                    <!-- Texto dinâmico -->
-                    <span>Não é permitido fumar dentro do imóvel</span>
-                </li>
-            </ul>
-        </section>
+                        <!-- Texto dinâmico -->
+                        <span>Não é permitido fumar dentro do imóvel</span>
+                    </li>
+                </ul>
+            </section>
+        </div>
     </main>
 
 </body>

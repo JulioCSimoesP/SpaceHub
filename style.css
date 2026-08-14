@@ -105,7 +105,7 @@ main {
     color: var(--text-highlight);
     border: none;
     border-radius: 8px;
-    padding: 0.75rem;
+    padding: 0 0.75rem;
     font-family: var(--font-primary);
     font-size: 0.875rem;
     font-weight: 700;
@@ -115,7 +115,7 @@ main {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 46px;
+    height: 46px;
 }
 
 .btn-primary:active {
@@ -128,7 +128,7 @@ main {
     color: var(--primary-color);
     border: 2px solid var(--primary-color);
     border-radius: 8px;
-    padding: calc(0.75rem - 2px);
+    padding: 0 calc(0.75rem - 2px);
     font-family: var(--font-primary);
     font-size: 0.875rem;
     font-weight: 700;
@@ -138,7 +138,7 @@ main {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 46px;
+    height: 46px;
 }
 
 .btn-secondary:active {
@@ -811,7 +811,7 @@ body.auth-page {
 
 .gallery-item-main {
     grid-column: span 3;
-    height: 240px;
+    height: 220px;
     border-radius: 16px;
 }
 
@@ -1652,8 +1652,11 @@ main.space-form-container {
     border: 1px solid #E5E7EB;
     border-radius: 16px;
     padding: 1rem;
-    margin-bottom: 1.5rem;
     box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+.user-profile-card {
+    margin-bottom: 1.5rem;
 }
 
 .user-profile-card .card-title,
@@ -1735,7 +1738,6 @@ main.space-form-container {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    font-size: 0.875rem;
     color: var(--secondary-text);
 }
 
@@ -2152,7 +2154,7 @@ main.space-form-container {
     .space-booking-cost-summary {
         gap: 0.75rem;
     }
-    
+
     .space-booking-cost-summary .cost-row.cost-total {
         margin-top: 0.25rem;
     }
@@ -2235,9 +2237,71 @@ main.space-form-container {
     .booking-details-cost-summary {
         gap: 0.75rem;
     }
-    
+
     .booking-details-cost-summary .cost-row.cost-total {
         margin-top: 0.25rem;
+    }
+
+    .booking-details-space-card {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        column-gap: 1rem;
+        row-gap: 1rem;
+        align-items: stretch;
+    }
+
+    #booking-details-map {
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+        height: 100%;
+        min-height: 240px;
+    }
+
+    .booking-details-space-card .space-card-header {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .booking-details-space-card .amenities-summary-list {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        grid-template-columns: repeat(2, 1fr);
+        align-content: center;
+        gap: 0.75rem;
+    }
+
+    .booking-details-space-card .btn-primary {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        align-self: end;
+    }
+
+    .user-profile-name {
+        font-size: 1.125rem;
+    }
+
+    .form-row-desktop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    .user-profile-card {
+        margin-bottom: 0;
+    }
+
+    div.form-row-desktop:first-of-type {
+        margin-bottom: 1.5rem;
+    }
+
+    .payment-summary-card {
+        margin-bottom: 0;
+    }
+
+    .booking-details-info-card {
+        margin-bottom: 0;
     }
 }
 
@@ -2516,5 +2580,9 @@ main.space-form-container {
 
     .status-badge {
         font-size: 0.875rem;
+    }
+
+    .user-profile-name {
+        font-size: 1.25rem;
     }
 }

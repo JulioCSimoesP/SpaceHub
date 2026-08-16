@@ -1757,16 +1757,16 @@ main.space-form-container {
 
 /* Components & Sections: Space Dashboard */
 
-.page-header {
+.my-spaces-container .page-header {
     margin-bottom: 1.5rem;
 }
 
-.page-header-text .page-title {
+.my-spaces-container .page-header-text .page-title {
     font-weight: 800;
     margin-bottom: 0.25rem;
 }
 
-.page-header-text .page-description {
+.my-spaces-container .page-header-text .page-description {
     color: var(--terciary-text);
     line-height: 1.4;
 }
@@ -1929,6 +1929,61 @@ main.my-spaces-container {
 
 .btn-sticky-action:hover {
     background-color: #0066c0;
+}
+
+.empty-state-container {
+    background-color: var(--secondary-bg);
+    border: 2px dashed #CBD5E1;
+    border-radius: 16px;
+    padding: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03);
+}
+
+.empty-state-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #EFF6FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.empty-state-icon svg {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+    stroke: currentColor;
+    stroke-width: 0.3rem;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.empty-state-title {
+    font-weight: 800;
+    max-width: 420px;
+    line-height: 1.3;
+}
+
+.empty-state-description {
+    color: var(--terciary-text);
+    max-width: 380px;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.btn-empty-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 1.5rem;
 }
 
 /* Breakpoints */
@@ -2485,6 +2540,56 @@ main.my-spaces-container {
     .booking-details-info-card {
         margin-bottom: 0;
     }
+
+    /* Components & Sections: Space Dashboard */
+
+    .space-crud-card {
+        display: grid;
+        grid-template-columns: 1.15fr 1fr;
+        grid-template-rows: 1fr auto;
+        align-items: stretch;
+    }
+
+    .space-crud-card .card-media {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        height: 100%;
+        min-height: 240px;
+    }
+
+    .space-crud-card .card-body {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        padding: 1rem;
+    }
+
+    .space-crud-card .card-actions {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        padding: 1rem;
+    }
+
+    .btn-sticky-action {
+        display: none;
+        pointer-events: none;
+    }
+
+    .btn-new-space {
+        display: inline-flex;
+        align-items: center
+    }
+
+    .my-spaces-container .page-header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 0.75rem;
+        flex-shrink: 0;
+    }
+
+    .btn-action {
+        font-size: 0.9375rem;
+    }
 }
 
 @media (min-width: 1100px) {
@@ -2766,5 +2871,11 @@ main.my-spaces-container {
 
     .user-profile-name {
         font-size: 1.25rem;
+    }
+
+    /* Components & Sections: Space Dashboard */
+
+    .btn-action {
+        font-size: 1rem;
     }
 }

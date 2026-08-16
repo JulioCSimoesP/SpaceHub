@@ -13,9 +13,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- PREENCHER COM O LINK DA FONTE -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
     <link href="" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css?v0.0.3">
+    <link rel="stylesheet" href="../style.css?v0.0.11">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
 
     <!-- PREENCHER COM OS LINKS DO FAVICON -->
@@ -52,8 +54,7 @@
         <div class="header-wrapper">
             <!-- Adicionar link para home -->
             <a href="" class="logo-link">
-                <!-- Adicionar link da logo -->
-                <img src="" alt="SpaceHub" class="header-logo">
+                <img src="../assets/images/logo.webp" alt="SpaceHub" class="header-logo">
             </a>
 
             <nav class="menu-nav">
@@ -61,8 +62,12 @@
                     <li>
                         <!-- Adicionar link -->
                         <a class="nav-link is-active" href="">
-                            <!-- Adicionar ícone do link com aria-hidden="true" -->
-
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z">
+                                </path>
+                            </svg>
                             <!-- Texto dinâmico -->
                             <span>Explorar</span>
                         </a>
@@ -70,8 +75,12 @@
                     <li>
                         <!-- Adicionar link -->
                         <a class="nav-link" href="">
-                            <!-- Adicionar ícone do link com aria-hidden="true" -->
-
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z">
+                                </path>
+                            </svg>
                             <!-- Texto dinâmico -->
                             <span>Minhas reservas</span>
                         </a>
@@ -83,7 +92,12 @@
                 <button id="btn-user-menu" class="user-menu-btn" aria-expanded="false" aria-haspopup="true"
                     aria-controls="user-dropdown">
                     <div class="user-avatar">
-                        <!-- Adicionar imagem do avatar com aria-hidden="true" -->
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                            viewBox="0 0 256 256">
+                            <path
+                                d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z">
+                            </path>
+                        </svg>
                     </div>
 
                     <div class="user-info">
@@ -93,15 +107,19 @@
                         <span class="user-role">Hóspede</span>
                     </div>
 
-                    <!-- Adicionar ícone de seta para baixo com aria-hidden="true" -->
-
                 </button>
 
                 <div id="user-dropdown" class="user-dropdown-menu hidden" role="menu" aria-labelledby="btn-user-menu">
                     <ul role="none">
                         <li role="none">
                             <!-- Adicionar link de logout -->
-                            <a href="" class="dropdown-link logout-link" role="menuitem">
+                            <a href="#" class="dropdown-link logout-link" role="menuitem">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                    fill="#000000" viewBox="0 0 256 256">
+                                    <path
+                                        d="M120,216a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V40a8,8,0,0,1,8-8h64a8,8,0,0,1,0,16H56V208h56A8,8,0,0,1,120,216Zm109.66-93.66-40-40a8,8,0,0,0-11.32,11.32L204.69,120H112a8,8,0,0,0,0,16h92.69l-26.35,26.34a8,8,0,0,0,11.32,11.32l40-40A8,8,0,0,0,229.66,122.34Z">
+                                    </path>
+                                </svg>
                                 <span>Sair da conta</span>
                             </a>
                         </li>
@@ -111,7 +129,12 @@
 
             <button class="btn-menu-toggle" id="btn-open-menu" aria-label="Abrir menu de navegação"
                 aria-expanded="false" aria-controls="modal-menu">
-                <!-- Ícone de Menu / Hamburger com aria-hidden="true" -->
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
+                    </path>
+                </svg>
             </button>
         </div>
     </header>
@@ -143,20 +166,24 @@
 
         <section class="booking-dashboard-list-section" aria-label="Lista de reservas">
 
-            <div id="empty-state-booking-dashboard" class="empty-state-container hidden">
+            <div id="empty-state-booking-dashboard" class="empty-state-container">
                 <div class="empty-state-icon">
-                    <!-- Ícone de reserva vazia com aria-hidden="true" -->
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+                        <path
+                            d="M80,224a8,8,0,0,1-8,8H56a16,16,0,0,1-16-16V184a8,8,0,0,1,16,0v32H72A8,8,0,0,1,80,224ZM216,88v48a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H120a8,8,0,0,1,0-16h32a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88Zm-56-8h28.69L160,51.31ZM80,24H56A16,16,0,0,0,40,40V64a8,8,0,0,0,16,0V40H80a8,8,0,0,0,0-16ZM208,168a8,8,0,0,0-8,8v40h-8a8,8,0,0,0,0,16h8a16,16,0,0,0,16-16V176A8,8,0,0,0,208,168ZM48,152a8,8,0,0,0,8-8V104a8,8,0,0,0-16,0v40A8,8,0,0,0,48,152Zm104,64H112a8,8,0,0,0,0,16h40a8,8,0,0,0,0-16Z">
+                        </path>
+                    </svg>
                 </div>
                 <h2 class="empty-state-title">Nenhuma reserva encontrada</h2>
                 <p class="empty-state-description">Não encontramos reservas registradas para o período selecionado.</p>
             </div>
 
-            <div class="booking-dashboard-list">
+            <div class="booking-dashboard-list hidden">
 
                 <article class="booking-dashboard-card-item">
                     <div class="card-media">
                         <!-- Imagem com alt dinâmico contendo o título do anúncio -->
-                        <img src="assets/images/placeholder-space-1.jpg" alt="Foto do imóvel: Título do anúncio">
+                        <img src="../assets/images/foto1.png" alt="Foto do imóvel: Título do anúncio">
                     </div>
 
                     <div class="card-body">
@@ -190,10 +217,8 @@
 
                     <div class="card-actions">
                         <!-- Adicionar link para ver detalhes da reserva -->
-                        <a href="" class="btn-action btn-view"
-                            aria-label="Ver detalhes da reserva para Título do anúncio">
+                        <a href="" class="btn-primary" aria-label="Ver detalhes da reserva para Título do anúncio">
                             <span>Ver detalhes</span>
-                            <!-- Ícone de redirecionamento com aria-hidden="true" -->
                         </a>
                     </div>
                 </article>
@@ -201,7 +226,7 @@
                 <article class="booking-dashboard-card-item">
                     <div class="card-media">
                         <!-- Imagem com alt dinâmico contendo o título do anúncio -->
-                        <img src="assets/images/placeholder-space-1.jpg" alt="Foto do imóvel: Título do anúncio">
+                        <img src="../assets/images/foto1.png" alt="Foto do imóvel: Título do anúncio">
                     </div>
 
                     <div class="card-body">
@@ -235,10 +260,8 @@
 
                     <div class="card-actions">
                         <!-- Adicionar link para ver detalhes da reserva -->
-                        <a href="" class="btn-action btn-view"
-                            aria-label="Ver detalhes da reserva para Título do anúncio">
+                        <a href="" class="btn-primary" aria-label="Ver detalhes da reserva para Título do anúncio">
                             <span>Ver detalhes</span>
-                            <!-- Ícone de redirecionamento com aria-hidden="true" -->
                         </a>
                     </div>
                 </article>
@@ -246,7 +269,7 @@
                 <article class="booking-dashboard-card-item">
                     <div class="card-media">
                         <!-- Imagem com alt dinâmico contendo o título do anúncio -->
-                        <img src="assets/images/placeholder-space-1.jpg" alt="Foto do imóvel: Título do anúncio">
+                        <img src="../assets/images/foto1.png" alt="Foto do imóvel: Título do anúncio">
                     </div>
 
                     <div class="card-body">
@@ -279,11 +302,9 @@
                     </div>
 
                     <div class="card-actions">
-                        <!-- Adicionar link para ver detalhes da reserva e aria-label dinâmico -->
-                        <a href="" class="btn-action btn-view"
-                            aria-label="Ver detalhes da reserva para Título do anúncio">
+                        <!-- Adicionar link para ver detalhes da reserva -->
+                        <a href="" class="btn-primary" aria-label="Ver detalhes da reserva para Título do anúncio">
                             <span>Ver detalhes</span>
-                            <!-- Ícone de redirecionamento com aria-hidden="true" -->
                         </a>
                     </div>
                 </article>

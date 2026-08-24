@@ -57,6 +57,8 @@ const spaceSchema = new mongoose.Schema(
                     'Proibido animais',
                     'Proibido festas ou eventos',
                     'Silêncio após às 22h',
+                    'Permitido apenas hóspedes cadastrados',
+                    'Uso obrigatório de crachá/identificação'
                 ],
                 message: '{VALUE} não é uma regra/política válida.'
             }
@@ -82,9 +84,11 @@ const spaceSchema = new mongoose.Schema(
                     'Elevador',
                     'Cozinha',
                     'Acessibilidade',
+                    'Permite animais',
                     'Segurança 24h',
                     'Área para fumantes',
-                    'TV'
+                    'TV',
+                    'Espaço para trabalho'
                 ],
                 message: '{VALUE} não é uma comodidade válida.'
             }

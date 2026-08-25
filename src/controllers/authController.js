@@ -16,21 +16,27 @@ const generateToken = (user) => {
     );
 };
 
-export const register = async (req, res) => {
+export const register = async (req, res, next) => {
     try {
         const { name, email, password, profileType, phoneNumber } = req.body;
 
         if (!name || !email || !password || !phoneNumber) {
-            return res.status(400).json({ message: 'Todos os campos obrigatórios devem ser preenchidos.' });
+            const error = new Error('Todos os campos obrigatórios devem ser preenchidos.')
+            error.statusCode = 400;
+            throw error;
         }
 
         const userExists = await User.findOne({ email });
         if (userExists) {
-            return res.status(409).json({ message: 'Este e-mail já está cadastrado no sistema.' });
+            const error = new Error('Este e-mail já está cadastrado no sistema.')
+            error.statusCode = 409;
+            throw error;
         }
 
         if (password.length < 8) {
-            return res.status(400).json({ message: 'A senha deve ter no mínimo 8 caracteres.' });
+            const error = new Error('A senha deve ter no mínimo 8 caracteres.')
+            error.statusCode = 400;
+            throw error;
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);
@@ -60,35 +66,32 @@ export const register = async (req, res) => {
             redirectTo: newUser.profileType === 'host' ? '/host/dashboard' : '/client/dashboard'
         });
     } catch (error) {
-        if (error.code === 11000) {
-            return res.status(409).json({ message: 'Este e-mail já está cadastrado.' });
-        }
-
-        if (error.name === 'ValidationError') {
-            const messages = Object.values(error.errors).map(err => err.message);
-            return res.status(400).json({ message: messages.join(' ') });
-        }
-
-        return res.status(500).json({ message: `Erro interno ao cadastrar usuário: ${error.message}` });
+        return next(error);
     }
 };
 
-export const login = async (req, res) => {
+export const login = async (req, res, next) => {
     try {
         const { email, password } = req.body;
 
         if (!email || !password) {
-            return res.status(400).json({ message: 'E-mail e senha são obrigatórios.' });
+            const error = new Error('E-mail e senha são obrigatórios.')
+            error.statusCode = 400;
+            throw error;
         }
 
         const user = await User.findOne({ email });
         if (!user) {
-            return res.status(401).json({ message: 'Credenciais inválidas.' });
+            const error = new Error('Credenciais inválidas.')
+            error.statusCode = 401;
+            throw error;
         }
 
         const isPasswordValid = await bcrypt.compare(password, user.password);
         if (!isPasswordValid) {
-            return res.status(401).json({ message: 'Credenciais inválidas.' });
+            const error = new Error('Credenciais inválidas.')
+            error.statusCode = 401;
+            throw error;
         }
 
         const token = generateToken(user);
@@ -105,15 +108,17 @@ export const login = async (req, res) => {
             redirectTo: user.profileType === 'host' ? '/host/dashboard' : '/client/explore'
         });
     } catch (error) {
-        return res.status(500).json({ message: `Erro interno no servidor: ${error.message}` });
+        return next(error);
     }
 };
 
-export const getMe = async (req, res) => {
+export const getMe = async (req, res, next) => {
     try {
         const user = await User.findById(req.user.id).select('-password');
         if (!user) {
-            return res.status(404).json({ message: 'Usuário não encontrado.' });
+            const error = new Error('Usuário não encontrado.')
+            error.statusCode = 404;
+            throw error;
         }
 
         return res.status(200).json({
@@ -121,6 +126,6 @@ export const getMe = async (req, res) => {
             redirectTo: user.profileType === 'host' ? '/host/dashboard' : '/client/explore'
         });
     } catch (error) {
-        return res.status(500).json({ message: `Erro interno no servidor: ${error.message}` });
+        return next(error);
     }
 };

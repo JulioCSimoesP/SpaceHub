@@ -1,9 +1,12 @@
 {
   "outputDirectory": "public",
-  "rewrites": [
+  "routes": [
     {
-      "source": "/((?!assets/|css/|js/|views/).*)",
-      "destination": "/index.html"
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
     }
   ]
 }

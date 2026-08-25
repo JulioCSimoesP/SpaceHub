@@ -25,10 +25,12 @@ app.use('/api/spaces', spaceRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/uploads', uploadRoutes);
 
+// Rota de teste
 app.get('/api/health', (req, res) => {
     res.status(200).json({ status: 'OK', message: 'API SpaceHub rodando!' });
 });
 
+// Manipulação de erros
 app.use(notFoundHandler);
 app.use(globalErrorHandler);
 

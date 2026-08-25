@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +17,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
     <link href="" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css?v0.0.14">
+    <link rel="stylesheet" href="/css/main.css?v0.0.1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
 
     <!-- PREENCHER COM OS LINKS DO FAVICON -->
@@ -42,5 +45,31 @@
     <!-- PREENCHER COM O LINK CANÔNICO -->
     <link rel="canonical" href="">
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js" defer></script>
-    <script src="../script.js?v0.0.2" defer></script>
+    <script type="module" src="/js/main.js?v0.0.1" defer></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "axios": "https://cdn.jsdelivr.net/npm/axios@1.7.9/+esm"
+        }
+    }
+    </script>
 </head>
+
+<body>
+    <header id="main-header"></header>
+
+    <main id="app"></main>
+
+    <footer id="main-footer"></footer>
+
+    <a href="#" class="btn-back-to-top" aria-label="Voltar ao topo da página">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
+            viewBox="0 0 256 256">
+            <path
+                d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z">
+            </path>
+        </svg>
+    </a>
+</body>
+
+</html>

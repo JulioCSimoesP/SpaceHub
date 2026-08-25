@@ -1,0 +1,326 @@
+<div class="explore-container">
+
+    <section class="explore-search-section" aria-label="Busca de espaços">
+        <form id="form-explore-search" class="search-card-form" role="search">
+            <div class="input-group">
+                <label for="explore-search-input">Onde você deseja ir?</label>
+                <input type="text" id="explore-search-input" name="location"
+                    placeholder="Ex: Avenida Paulista, São Paulo - SP" autocomplete="off">
+            </div>
+
+            <div class="search-actions-grid">
+                <button type="submit" class="btn-primary">
+                    <span>Buscar</span>
+                </button>
+
+                <button type="button" id="btn-open-filters" class="btn-secondary" aria-haspopup="dialog"
+                    aria-expanded="false" aria-controls="modal-filters">
+                    <span>Filtros</span>
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <section class="explore-map-section" aria-label="Mapa de espaços próximos">
+        <header class="map-section-header">
+            <div class="map-header-text">
+                <h1 class="page-title">Espaços mais próximos</h1>
+                <!-- Texto dinâmico -->
+                <p class="page-description">
+                    Resultados dentro de <span id="search-radius-val">5 km</span> da localização escolhida.
+                </p>
+            </div>
+
+            <button type="button" id="btn-toggle-fullscreen-map" class="btn-primary"
+                aria-label="Expandir mapa para tela cheia">
+                <span>Ver no mapa</span>
+            </button>
+        </header>
+
+        <div id="explore-map" class="google-map-container" aria-label="Mapa com localização dos espaços"></div>
+    </section>
+
+    <section class="explore-results-section" aria-label="Resultados da busca de espaços">
+
+        <div class="results-count-bar">
+            <span id="results-count" class="results-count-text" aria-live="polite">
+                <!-- Texto dinâmico -->
+                <strong>24</strong> espaços encontrados
+            </span>
+        </div>
+
+        <div id="empty-explore-state" class="empty-state-container hidden">
+            <div class="empty-state-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="#000000"
+                    viewBox="0 0 256 256">
+                    <path
+                        d="M80,224a8,8,0,0,1-8,8H56a16,16,0,0,1-16-16V184a8,8,0,0,1,16,0v32H72A8,8,0,0,1,80,224ZM216,88v48a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H120a8,8,0,0,1,0-16h32a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88Zm-56-8h28.69L160,51.31ZM80,24H56A16,16,0,0,0,40,40V64a8,8,0,0,0,16,0V40H80a8,8,0,0,0,0-16ZM208,168a8,8,0,0,0-8,8v40h-8a8,8,0,0,0,0,16h8a16,16,0,0,0,16-16V176A8,8,0,0,0,208,168ZM48,152a8,8,0,0,0,8-8V104a8,8,0,0,0-16,0v40A8,8,0,0,0,48,152Zm104,64H112a8,8,0,0,0,0,16h40a8,8,0,0,0,0-16Z">
+                    </path>
+                </svg>
+            </div>
+            <h2 class="empty-state-title">Nenhum espaço encontrado</h2>
+            <p class="empty-state-description">Tente alterar sua busca ou filtros para encontrar mais
+                opções.</p>
+        </div>
+
+        <div class="explore-spaces-grid">
+
+            <article class="explore-space-card">
+                <div class="card-media">
+                    <!-- Imagem com alt dinâmico contendo o título do anúncio -->
+                    <img src="./assets/images/foto1.png" alt="Foto principal: Título do anúncio">
+                </div>
+
+                <div class="card-body">
+                    <!-- Texto dinâmico -->
+                    <h2 class="space-title">Título do anúncio</h2>
+
+                    <div class="space-location-badge">
+                        <!-- Ícone de Localização -->
+
+                        <!-- Texto dinâmico -->
+                        <span>Rua biribiri, 123 - Frufru</span>
+                    </div>
+
+                    <ul class="amenities-summary-list">
+                        <li class="amenity-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                                </path>
+                            </svg>
+
+                            <!-- Texto dinâmico -->
+                            <span>Wi-Fi</span>
+                        </li>
+                        <li class="amenity-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                                </path>
+                            </svg>
+
+                            <!-- Texto dinâmico -->
+                            <span>Ar-condicionado</span>
+                        </li>
+                        <li class="amenity-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                                </path>
+                            </svg>
+
+                            <!-- Texto dinâmico -->
+                            <span>Estacionamento</span>
+                        </li>
+                        <li class="amenity-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                                </path>
+                            </svg>
+
+                            <!-- Texto dinâmico -->
+                            <span>Estacionamento</span>
+                        </li>
+                        <li class="amenity-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                                </path>
+                            </svg>
+
+                            <!-- Texto dinâmico -->
+                            <span>Estacionamento</span>
+                        </li>
+                        <li class="amenity-item amenity-item-more">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
+                                fill="#000000" viewBox="0 0 256 256">
+                                <path
+                                    d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z">
+                                </path>
+                            </svg>
+
+                            <!-- Texto dinâmico -->
+                            <span>+3 comodidades</span>
+                        </li>
+                    </ul>
+
+                    <div class="card-footer-row">
+                        <div class="space-price">
+                            <!-- Texto dinâmico -->
+                            <span class="price-value">R$ 310</span>
+                            <span class="price-period">/ noite</span>
+                        </div>
+
+                        <!-- Adicionar link para detalhes do anúncio com aria-label dinâmico -->
+                        <a href="" class="btn-primary" aria-label="Ver detalhes de Título do anúncio">
+                            <span>Ver detalhes</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <nav class="pagination-footer" aria-label="Navegação por páginas de resultados">
+            <div class="items-per-page-control">
+                <label for="items-per-page">Espaços por página:</label>
+                <div class="select-wrapper">
+                    <select id="items-per-page" name="itemsPerPage">
+                        <option value="6">6</option>
+                        <option value="12" selected>12</option>
+                        <option value="24">24</option>
+                        <option value="48">48</option>
+                    </select>
+                </div>
+            </div>
+
+            <span class="current-shown-items" aria-live="polite" aria-atomic="true"></span>
+
+            <div class="pagination-controls">
+                <button type="button" id="btn-prev-page" class="page-btn" aria-label="Página anterior">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        fill="currentColor" viewBox="0 0 256 256">
+                        <path
+                            d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z">
+                        </path>
+                    </svg>
+                </button>
+
+                <div class="page-numbers-container"></div>
+
+                <button type="button" id="btn-next-page" class="page-btn" aria-label="Próxima página">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        fill="currentColor" viewBox="0 0 256 256">
+                        <path
+                            d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </section>
+</div>
+
+<div id="modal-filters" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="filters-title">
+    <div class="modal-container modal-filters-container">
+
+        <form id="form-advanced-filters" class="modal-filters-form">
+
+            <header class="modal-header">
+                <h2 id="filters-title" class="modal-title">Filtros</h2>
+
+                <button type="button" id="btn-close-filters" class="btn-close-modal"
+                    aria-label="Fechar modal de filtros">
+                    <!-- Ícone 'X' com aria-hidden="true" -->
+                </button>
+
+                <button type="reset" id="btn-reset-filters" class="btn-reset-filter">
+                    <!-- Ícone de Reset -->
+                    <span>Voltar ao padrão</span>
+                </button>
+            </header>
+
+            <div class="modal-body">
+
+                <fieldset class="filter-group">
+                    <div class="filter-label-header">
+                        <legend class="filter-group-title">Raio de busca</legend>
+                        <!-- Texto dinâmico -->
+                        <output id="radius-value-display" class="filter-value-badge" for="filter-radius">5
+                            km</output>
+                    </div>
+
+                    <div class="range-slider-single-wrapper">
+                        <input type="range" id="filter-radius" name="radius" min="1" max="50" step="1" value="5">
+                    </div>
+
+                    <div class="range-scale-labels">
+                        <span>1 km</span>
+                        <span>10 km</span>
+                        <span>25 km</span>
+                        <span>50 km</span>
+                    </div>
+                </fieldset>
+
+                <fieldset class="filter-group">
+                    <legend class="filter-group-title">Características</legend>
+
+                    <div class="selection-cards-grid filter-amenities-grid">
+
+                        <label class="selection-card">
+                            <!-- Valor dinâmico -->
+                            <input type="checkbox" name="amenities" value="wifi" class="sr-only">
+                            <div class="selection-card-content">
+                                <!-- Ícone dinâmico com aria-hidden="true" -->
+
+                                <!-- Texto dinâmico -->
+                                <span class="card-text">Wi-Fi</span>
+                                <!-- Ícone de check com aria-hidden="true" -->
+                            </div>
+                        </label>
+
+                        <label class="selection-card">
+                            <!-- Valor dinâmico -->
+                            <input type="checkbox" name="amenities" value="wifi" class="sr-only">
+                            <div class="selection-card-content">
+                                <!-- Ícone dinâmico com aria-hidden="true" -->
+
+                                <!-- Texto dinâmico -->
+                                <span class="card-text">Wi-Fi</span>
+                                <!-- Ícone de check com aria-hidden="true" -->
+                            </div>
+                        </label>
+
+                        <label class="selection-card">
+                            <!-- Valor dinâmico -->
+                            <input type="checkbox" name="amenities" value="wifi" class="sr-only">
+                            <div class="selection-card-content">
+                                <!-- Ícone dinâmico com aria-hidden="true" -->
+
+                                <!-- Texto dinâmico -->
+                                <span class="card-text">Wi-Fi</span>
+                                <!-- Ícone de check com aria-hidden="true" -->
+                            </div>
+                        </label>
+
+                    </div>
+                </fieldset>
+
+                <fieldset class="filter-group">
+                    <div class="filter-label-header">
+                        <legend class="filter-group-title">Faixa de preço (por noite)</legend>
+                    </div>
+
+                    <div class="range-slider-double-wrapper">
+                        <!-- Valor dinâmico -->
+                        <input type="range" id="filter-min-price" name="minPrice" min="0" max="1000" value="0" step="10"
+                            aria-label="Preço mínimo">
+                        <!-- Valor dinâmico -->
+                        <input type="range" id="filter-max-price" name="maxPrice" min="0" max="1000" value="1000"
+                            step="10" aria-label="Preço máximo">
+                    </div>
+
+                    <div class="range-scale-labels">
+                        <!-- Texto dinâmico -->
+                        <span>R$ 0</span>
+                        <!-- Texto dinâmico -->
+                        <span>R$ 1.000+</span>
+                    </div>
+                </fieldset>
+
+            </div>
+
+            <footer class="modal-footer">
+                <button type="submit" class="btn-primary btn-block">Aplicar filtros</button>
+            </footer>
+
+        </form>
+    </div>
+</div>

@@ -8,8 +8,6 @@ O **SpaceHub** é uma plataforma web full-stack desenvolvida para facilitar a de
 
 ## 📌 Links de Planejamento e Documentação Técnica
 
-Os documentos e diagramas que guiaram a arquitetura e desenvolvimento do projeto estão organizados na pasta `/public/assets/docs/`:
-
 * 🎯 [Visão Geral do Projeto](https://space-hub-one-liart.vercel.app/assets/docs/visao_do_projeto_spacehub.docx)
 * 📐 [Requisitos Funcionais e Não Funcionais](https://space-hub-one-liart.vercel.app/assets/docs/requisitos_spacehub.docx)
 * 🧠 [Registro de Decisões Técnicas (ADR)](https://space-hub-one-liart.vercel.app/assets/docs/registro_de_decisoes_tecnicas-spacehub.docx)

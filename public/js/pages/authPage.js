@@ -106,6 +106,8 @@ function setupRegisterForm() {
                 profileType
             });
 
+            console.log(data);
+
             auth.setSession(data.token, data.user);
 
             const redirectPath = data.redirectTo || (data.user.profileType === 'host' ? '/host/spaces' : '/client/explore');

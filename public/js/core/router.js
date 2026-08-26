@@ -145,7 +145,7 @@ class Router {
                 throw new Error(`O servidor retornou o index.html em vez de ${viewUrl}. Verifique os caminhos.`);
             }
             this.appElement.innerHTML = html;
-        } catch(error) {
+        } catch (error) {
             console.error('Erro no renderView:', error);
             this.appElement.innerHTML = '<h2>Erro ao carregar a página.</h2>';
         }
@@ -158,20 +158,38 @@ class Router {
             return;
         }
 
+        const { initHeader, updateActiveLinks } = await import('../pages/headerPage.js');
+
         if (this.headerElement.children.length === 0) {
             const response = await fetch('/views/partials/header.html');
             this.headerElement.innerHTML = await response.text();
-            const { initHeader } = await import('../pages/headerPage.js');
             initHeader();
+        } else {
+            updateActiveLinks();
         }
+        
         this.headerElement.classList.remove('hidden');
     }
 
     async renderNotFound() {
-        document.body.className = 'not-found-page';
-        const response = await fetch('/views/shared/not-found.html');
-        this.appElement.innerHTML = await response.text();
-        this.headerElement.classList.add('hidden');
+        try {
+            document.body.className = 'not-found-page';
+            const response = await fetch('/views/shared/not-found.html');
+            if (!response.ok) throw new Error('Não foi possível carregar not-found.html');
+
+            const html = await response.text();
+            if (html.toLowerCase().includes('<title>spacehub')) {
+                throw new Error('Retornou index.html em vez de not-found.html');
+            }
+
+            this.appElement.innerHTML = html;
+            this.headerElement.classList.add('hidden');
+        } catch (error) {
+            console.error('Erro no renderNotFound:', error);
+            this.appElement.innerHTML = '<h2>404 - Página não encontrada</h2>';
+        } finally {
+            this.headerElement.classList.add('hidden');
+        }
     }
 }
 

@@ -11,6 +11,20 @@ export function initHeader() {
     setupLogout();
 }
 
+export function updateActiveLinks() {
+    const currentPath = window.location.pathname;
+
+    const allLinks = document.querySelectorAll('.menu-nav ul li a, .modal-menu-nav .menu-btn');
+    allLinks.forEach((link) => {
+        const href = link.getAttribute('href');
+        if (href === currentPath) {
+            link.classList.add('is-active');
+        } else {
+            link.classList.remove('is-active');
+        }
+    });
+}
+
 function renderUserInfo(user) {
     const firstName = user.name ? user.name.split(' ')[0] : 'Usuário';
     const roleText = user.profileType === 'host' ? 'Anfitrião' : 'Hóspede';

@@ -63,7 +63,7 @@ export const register = async (req, res, next) => {
                 phoneNumber: newUser.phoneNumber,
                 createdAt: newUser.createdAt
             },
-            redirectTo: newUser.profileType === 'host' ? '/host/dashboard' : '/client/dashboard'
+            redirectTo: newUser.profileType === 'host' ? '/host/spaces' : '/client/explore'
         });
     } catch (error) {
         return next(error);
@@ -105,7 +105,7 @@ export const login = async (req, res, next) => {
                 email: user.email,
                 profileType: user.profileType
             },
-            redirectTo: user.profileType === 'host' ? '/host/dashboard' : '/client/explore'
+            redirectTo: user.profileType === 'host' ? '/host/spaces' : '/client/explore'
         });
     } catch (error) {
         return next(error);

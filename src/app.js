@@ -30,6 +30,13 @@ app.get('/api/health', (req, res) => {
     res.status(200).json({ status: 'OK', message: 'API SpaceHub rodando!' });
 });
 
+app.get(/(.*)/, (req, res, next) => {
+    if (req.path.startsWith('/api')) {
+        return next();
+    }
+    res.sendFile(path.join(__dirname, '../public/index.html'));
+});
+
 // Manipulação de erros
 app.use(notFoundHandler);
 app.use(globalErrorHandler);

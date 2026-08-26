@@ -318,12 +318,34 @@ function updateCostSummary(space, nights) {
     `;
 }
 
-function setupBookingFormSubmit(space) {
+function formatDateToDDMMAAAA(isoStr) {
+    if (!isoStr) return '';
+    const [y, m, d] = isoStr.split('-');
+    return `${d}/${m}/${y}`;
+}
+
+function parseDDMMAAAAToDate(dateStr) {
+    const [d, m, y] = dateStr.split('/').map(Number);
+    return new Date(y, m - 1, d);
+}
+
+function checkDatesOverlap(startA, endA, startB, endB) {
+    return startA < endB && endA > startB;
+}
+
+function setupBookingFormSubmit(space, existingBookings = []) {
     const form = document.getElementById('form-booking');
     if (!form) return;
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
+
+        const currentUser = auth.getUser();
+        if (!currentUser) {
+            alert('Você precisa estar conectado para realizar uma reserva.');
+            router.navigate('/auth/login');
+            return;
+        }
 
         const checkinVal = form.checkin.value;
         const checkoutVal = form.checkout.value;
@@ -333,24 +355,50 @@ function setupBookingFormSubmit(space) {
             return;
         }
 
+        const selectedStart = new Date(`${checkinVal}T00:00:00`);
+        const selectedEnd = new Date(`${checkoutVal}T00:00:00`);
+
+        if (selectedEnd <= selectedStart) {
+            alert('A data de check-out deve ser posterior à data de check-in.');
+            return;
+        }
+
+        const hasLocalConflict = existingBookings.some((b) => {
+            if (b.status === 'canceled') return false;
+            const bStart = parseDDMMAAAAToDate(b.startDate);
+            const bEnd = parseDDMMAAAAToDate(b.endDate);
+            return checkDatesOverlap(selectedStart, selectedEnd, bStart, bEnd);
+        });
+
+        if (hasLocalConflict) {
+            alert('Este espaço já possui uma reserva ativa para o período selecionado. Por favor, escolha outras datas.');
+            return;
+        }
+
         const submitBtn = document.getElementById('btn-submit-booking');
         submitBtn.disabled = true;
         submitBtn.textContent = 'Processando reserva...';
 
         try {
-            const formatDateToDDMMAAAA = (isoStr) => {
-                const [y, m, d] = isoStr.split('-');
-                return `${d}/${m}/${y}`;
-            };
+            const startDateFormatted = formatDateToDDMMAAAA(checkinVal);
+            const endDateFormatted = formatDateToDDMMAAAA(checkoutVal);
 
-            await bookingService.createBooking({
+            const response = await bookingService.createBooking({
                 spaceId: space._id,
-                startDate: formatDateToDDMMAAAA(checkinVal),
-                endDate: formatDateToDDMMAAAA(checkoutVal)
+                startDate: startDateFormatted,
+                endDate: endDateFormatted
             });
 
+            const createdBooking = response.booking || response.data || response;
+            const newBookingId = createdBooking._id || createdBooking.id;
+
             alert('Reserva realizada com sucesso!');
-            router.navigate('/client/bookings');
+
+            if (newBookingId) {
+                router.navigate(`/bookings/${newBookingId}`);
+            } else {
+                router.navigate('/client/bookings');
+            }
         } catch (error) {
             console.error('Erro ao realizar reserva:', error);
             const msg = error.response?.data?.message || 'Falha ao processar reserva. Tente novamente.';

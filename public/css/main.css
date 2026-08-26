@@ -2465,8 +2465,6 @@ main.my-spaces-container {
     min-width: 150px;
 }
 
-/*****************/
-
 #modal-filters {
     position: fixed;
     top: 0;
@@ -2517,7 +2515,6 @@ main.my-spaces-container {
     max-height: 90vh;
 }
 
-/* Header */
 .modal-filters-form .modal-header {
     display: flex;
     align-items: center;
@@ -2560,7 +2557,7 @@ main.my-spaces-container {
     background-color: #E2E8F0;
 }
 
-.modal-filters-form .btn-close-modal:active {=
+.modal-filters-form .btn-close-modal:active {
     transform: scale(0.95);
 }
 
@@ -2595,7 +2592,6 @@ main.my-spaces-container {
     transform: scale(0.96);
 }
 
-/* Corpo e Grupos de Filtro */
 .modal-filters-form .modal-body {
     padding: 1.5rem;
     overflow-y: auto;
@@ -2637,7 +2633,6 @@ main.my-spaces-container {
     border-radius: 12px;
 }
 
-/* Sliders de Range */
 .range-slider-single-wrapper,
 .range-slider-double-wrapper {
     width: 100%;
@@ -2664,7 +2659,6 @@ main.my-spaces-container {
     color: var(--terciary-text);
 }
 
-/* Footer com botão de ação */
 .modal-filters-form .modal-footer {
     padding: 1rem 1.5rem;
     border-top: 1px solid #E5E7EB;
@@ -2675,7 +2669,39 @@ main.my-spaces-container {
     width: 100%;
 }
 
-/*****************/
+.btn-close-fullscreen-map {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    z-index: 999;
+    background-color: var(--secondary-bg);
+    color: var(--primary-text);
+    border: 1px solid #E5E7EB;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-close-fullscreen-map:hover {
+    background-color: #EDF2F7;
+    transform: scale(1.05);
+}
+
+.btn-close-fullscreen-map:active {
+    transform: scale(0.95);
+}
+
+.btn-close-fullscreen-map svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
 
 /* Breakpoints */
 

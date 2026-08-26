@@ -4,14 +4,14 @@
 
         <header class="space-form-header">
             <div class="space-form-header-text">
-                <h1 class="page-title">Criar novo anúncio</h1>
+                <h1 class="page-title">Criar novo espaço</h1>
                 <p class="page-description">Preencha as informações abaixo para anunciar o seu espaço.</p>
             </div>
 
             <div class="space-form-header-actions">
                 <!-- Adicionar link de retorno -->
                 <a href="" class="btn-secondary">Cancelar</a>
-                <button type="submit" class="btn-primary">Criar anúncio</button>
+                <button type="submit" class="btn-primary">Criar espaço</button>
             </div>
         </header>
 
@@ -19,7 +19,7 @@
             <legend class="section-title">Informações básicas</legend>
 
             <div class="input-group">
-                <label for="space-title">Título do anúncio</label>
+                <label for="space-title">Título do espaço</label>
                 <input type="text" id="space-title" name="title" placeholder="Ex: Apartamento aconchegante no centro"
                     required>
             </div>
@@ -62,13 +62,13 @@
                 <!-- O mapa será renderizado via JavaScript -->
             </div>
 
-            <!-- Campos Ocultos para armazenar os detalhes do endereço selecionado -->
-            <input type="hidden" id="addr-street" name="street">
-            <input type="hidden" id="addr-number" name="number">
-            <input type="hidden" id="addr-neighborhood" name="neighborhood">
-            <input type="hidden" id="addr-city" name="city">
+            <input type="hidden" id="addr-name" name="addressName">
+            <input type="hidden" id="addr-number" name="addressNumber">
+            <input type="hidden" id="addr-sublocality" name="sublocality">
+            <input type="hidden" id="addr-locality" name="locality">
             <input type="hidden" id="addr-state" name="state">
-            <input type="hidden" id="addr-zip" name="zipCode">
+            <input type="hidden" id="addr-country" name="country" value="Brasil">
+            <input type="hidden" id="addr-zip" name="postalCode">
             <input type="hidden" id="addr-lat" name="latitude">
             <input type="hidden" id="addr-lng" name="longitude">
         </fieldset>
@@ -83,7 +83,7 @@
 
                 <label class="upload-dropzone">
                     <input type="file" id="space-photos" name="images" multiple
-                        accept="image/png, image/jpeg, image/webp" class="sr-only" required>
+                        accept="image/png, image/jpeg, image/webp" class="sr-only">
 
                     <div class="upload-dropzone-content">
                         <!-- Ícone de Upload / Imagem com aria-hidden="true" -->
@@ -94,19 +94,7 @@
                 </label>
 
                 <div id="photos-preview-grid" class="photos-preview-grid">
-                    <div class="photo-preview-item">
-                        <!-- alt dinâmico -->
-                        <img src="./assets/images/foto1.png" alt="Foto 1">
-                        <!-- aria-label dinâmico -->
-                        <button type="button" class="btn-remove-photo" aria-label="Remover foto 1">
-                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32"
-                                fill="#000000" viewBox="0 0 256 256">
-                                <path
-                                    d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z">
-                                </path>
-                            </svg>
-                        </button>
-                    </div>
+                    <div class="photo-preview-item"></div>
                 </div>
             </fieldset>
 
@@ -270,6 +258,6 @@
 
     <div class="space-form-mobile-actions">
         <a href="#" class="btn-secondary">Cancelar</a>
-        <button type="submit" form="form-create-space" class="btn-primary">Criar anúncio</button>
+        <button type="submit" form="form-create-space" class="btn-primary">Criar espaço</button>
     </div>
 </div>

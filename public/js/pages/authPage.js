@@ -4,7 +4,6 @@ import { router } from '../core/router.js';
 
 export function initAuthPage() {
     setupModalSwitching();
-    setupPasswordToggle();
     setupLoginForm();
     setupRegisterForm();
 }
@@ -25,23 +24,6 @@ function setupModalSwitching() {
     btnSwitchToLogin?.addEventListener('click', () => {
         modalRegister.classList.add('hidden');
         modalLogin.classList.remove('hidden');
-    });
-}
-
-/**
- * Alterna entre type="password" e type="text" no campo de senha
- */
-function setupPasswordToggle() {
-    const toggleBtn = document.getElementById('btn-toggle-password');
-    const passwordInput = document.getElementById('login-password');
-
-    if (!toggleBtn || !passwordInput) return;
-
-    toggleBtn.addEventListener('click', () => {
-        const isPassword = passwordInput.getAttribute('type') === 'password';
-        passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
-        toggleBtn.classList.toggle('is-visible', isPassword);
-        toggleBtn.setAttribute('aria-label', isPassword ? 'Ocultar senha' : 'Mostrar senha');
     });
 }
 

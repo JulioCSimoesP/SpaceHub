@@ -131,7 +131,17 @@ function setupMobileMenu() {
         btnOpenMenu?.setAttribute('aria-expanded', 'false');
     };
 
-    btnOpenMenu?.addEventListener('click', openMenu);
+    const toggleMenu = () => {
+        const isHidden = modalMenu.classList.contains('hidden');
+        if (isHidden) {
+            openMenu();
+        } else {
+            closeMenu();
+        }
+    };
+
+    btnOpenMenu?.addEventListener('click', toggleMenu);
+
     btnCloseMenu?.addEventListener('click', closeMenu);
 
     modalMenu.querySelectorAll('a[data-link]').forEach((link) => {

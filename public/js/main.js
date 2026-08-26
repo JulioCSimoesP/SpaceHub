@@ -37,14 +37,14 @@ const AppController = {
 
         window.addEventListener('scroll', () => {
             if (document.body.classList.contains('auth-page')) {
-                backToTopBtn.classList.add('hidden');
+                backToTopBtn.classList.remove('is-visible');
                 return;
             }
 
             if (window.scrollY > 300) {
-                backToTopBtn.classList.remove('hidden');
+                backToTopBtn.classList.add('is-visible');
             } else {
-                backToTopBtn.classList.add('hidden');
+                backToTopBtn.classList.remove('is-visible');
             }
         });
 

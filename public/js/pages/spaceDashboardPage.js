@@ -1,5 +1,6 @@
 import { spaceService } from '../services/spaceService.js';
 import { router } from '../core/router.js';
+import { Utils } from '../utils/formatters.js';
 
 export async function initSpaceDashboardPage() {
     setupActionButtons();
@@ -48,12 +49,19 @@ async function loadMySpaces() {
 
 function renderSpacesList(spaces, container) {
     container.innerHTML = spaces.map((space) => {
-        const primaryImage = space.images?.[0] || './assets/images/foto1.png';
-        const formattedPrice = Number(space.pricePerNight || 0).toLocaleString('pt-BR', {
-            style: 'currency',
-            currency: 'BRL'
-        });
-        const address = `${space.street || ''}, ${space.number || ''} - ${space.neighborhood || space.city || ''}`;
+        const firstImg = space.images?.[0];
+        const primaryImage = typeof firstImg === 'object' ? firstImg?.url : (firstImg || '/assets/images/foto1.png');
+
+        const formattedPrice = Utils.formatCurrency(space.price);
+
+        const locale = space.locale || {};
+        const street = locale.addressName || '';
+        const number = locale.addressNumber ? `, ${locale.addressNumber}` : '';
+        const neighborhoodOrCity = locale.sublocality || locale.locality || '';
+        
+        const address = street 
+            ? `${street}${number} - ${neighborhoodOrCity}`
+            : (locale.locality ? `${locale.locality} - ${locale.state}` : 'Localização não informada');
 
         return `
             <article class="space-crud-card" data-id="${space._id}">

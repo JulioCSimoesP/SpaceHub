@@ -37,6 +37,12 @@ const routes = {
         allowedRoles: ['host'],
         init: () => import('../pages/spaceFormPage.js').then((m) => m.initSpaceFormPage())
     },
+    '/host/spaces/:id/edit': {
+        view: '/views/host/space-form.html',
+        bodyClass: 'host-page space-form-page',
+        allowedRoles: ['host'],
+        init: (params) => import('../pages/spaceFormPage.js').then((m) => m.initSpaceFormPage(params))
+    },
     '/host/bookings': {
         view: '/views/shared/booking-dashboard.html',
         bodyClass: 'host-page bookings-page',
@@ -54,7 +60,7 @@ const routes = {
         bodyClass: 'booking-details-page',
         isPublic: false,
         init: (params) => import('../pages/bookingDetailsPage.js').then((m) => m.initBookingDetailsPage(params))
-    }
+    },
 };
 
 class Router {
@@ -167,7 +173,7 @@ class Router {
         } else {
             updateActiveLinks();
         }
-        
+
         this.headerElement.classList.remove('hidden');
     }
 

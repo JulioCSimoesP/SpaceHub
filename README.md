@@ -6,6 +6,17 @@ O **SpaceHub** é uma plataforma web full-stack desenvolvida para facilitar a de
 
 ---
 
+## 👥 Contas de Acesso Rápido para Testes
+
+Caso queira navegar pela plataforma sem a necessidade de criar um novo cadastro, você pode utilizar as contas pré-configuradas com espaços cadastrados e histórico de reservas:
+
+| Perfil | E-mail | Senha | Descrição |
+| :--- | :--- | :--- | :--- |
+| **Hóspede** | `jose.carlos@gmail.com` | `12345678` | Acesso para exploração e reservas realizadas |
+| **Anfitrião** | `ana.carolina@gmail.com` | `12345678` | Acesso com listagem de imóveis e reservas ativas |
+
+---
+
 ## 📌 Links de Planejamento e Documentação Técnica
 
 * 🎯 [Visão Geral do Projeto](https://space-hub-one-liart.vercel.app/assets/docs/visao_do_projeto_spacehub.docx)
